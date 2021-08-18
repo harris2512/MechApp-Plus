@@ -1,0 +1,15 @@
+<resources>
+
+
+    <string name="app_name">MechApp\nPlus</string>
+
+
+    <!--Onboard Verifying-->
+    <string name="label_verifying_desc">Your personal information and required documents are successfully has updated by you.\n\nYour profile information like:\n1. Name, email, mobile number and Address.\n2. GST Registration, Aadhar number, PAN number and Bank account details.\n3. Uploaded images of profile, aadhar and PAN.\n\nThanks to submit for review your Information and Documents. Will contact you once we verified your profile. it will may take maximum 72 hours from you submitted.
+    </string>
+
+    <!--Global-->
+    <string name="contentDescription">TODO</string>
+
+
+</resources>

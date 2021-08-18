@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".screen.activity.onboard.OnboardActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_onboard_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/img_onboard_back"
+            android:layout_width="@dimen/sizeFortySix"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            android:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.05"
+            android:text="Onboard"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_regular"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_onboard_timeline"
+        layout="@layout/include_onboard_timeline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/linear_onboard_toolbar" />
+
+    <FrameLayout
+        android:id="@+id/frame_onboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_onboard_timeline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

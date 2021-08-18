@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- Base application theme. -->
+    <style name="Theme.MechApp" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+
+    </style>
+
+
+    <!--Theme - StatusBar Transparent-->
+    <style name="status_bar_transparent" parent="Theme.MechApp">
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+
+        <!--Status Bar Color-->
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+        </item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+    </style>
+
+
+    <!--Font Family-->
+    <style name="RobotoTextViewStyle" parent="Widget.AppCompat.TextView">
+        <!--        <item name="android:fontFamily">@font/roboto_regular</item>-->
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <!--TextAppearance-->
+    <style name="MyTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="MyTextAppearanceBold" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
