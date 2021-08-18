@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:paddingTop="@dimen/sizeTwentyTwo">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_error_onboard_personal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/sizeThirtyTwo"
+        android:paddingEnd="@dimen/sizeThirtyTwo"
+        android:text="*Please fill all the required fields."
+        android:textColor="@color/colorRedPrimary"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Full Name-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_onboard_personal_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sizeThirtyTwo"
+        app:boxStrokeColor="@color/black"
+        app:errorTextAppearance="@style/MyTextAppearance"
+        app:hintTextAppearance="@style/MyTextAppearance"
+        app:hintTextColor="@color/colorGreyDark"
+        app:layout_constraintTop_toBottomOf="@id/tv_error_onboard_personal"
+        app:startIconDrawable="@drawable/ic_person">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_onboard_personal_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/digit_text"
+            android:gravity="center_vertical"
+            android:hint="Full Name *"
+            android:inputType="text"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingTop="@dimen/sizeTwentyTwo"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:paddingBottom="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/body_regular"
+            app:hintTextColor="@color/colorGreyDark" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Email-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_onboard_personal_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sizeThirtyTwo"
+        app:boxStrokeColor="@color/black"
+        app:hintTextAppearance="@style/MyTextAppearance"
+        app:hintTextColor="@color/colorGreyDark"
+        app:layout_constraintTop_toBottomOf="@id/input_onboard_personal_name"
+        app:startIconDrawable="@drawable/ic_email">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_onboard_personal_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/digits_email"
+            android:gravity="center_vertical"
+            android:hint="Email Id"
+            android:inputType="textEmailAddress"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingTop="@dimen/sizeTwentyTwo"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:paddingBottom="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/body_regular"
+            app:hintTextColor="@color/colorGreyDark" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Additional mobile no-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_onboard_personal_mobile"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sizeThirtyTwo"
+        app:boxStrokeColor="@color/black"
+        app:hintTextAppearance="@style/MyTextAppearance"
+        app:hintTextColor="@color/colorGreyDark"
+        app:layout_constraintTop_toBottomOf="@id/input_onboard_personal_email"
+        app:startIconDrawable="@drawable/ic_mobile_phone">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_onboard_personal_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/digit_number"
+            android:gravity="center_vertical"
+            android:hint="Additional Mobile No."
+            android:inputType="number"
+            android:letterSpacing="0.05"
+            android:maxLength="10"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingTop="@dimen/sizeTwentyTwo"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:paddingBottom="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/body_regular"
+            app:hintTextColor="@color/colorGreyDark" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_onboard_personal_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGreenPrimary"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:padding="@dimen/sizeSixteen"
+        android:text="Next"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/body_regular"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

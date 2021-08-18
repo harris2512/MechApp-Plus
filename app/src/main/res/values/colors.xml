@@ -9,6 +9,7 @@
     <color name="colorGreenPrimaryDark">#17C158</color>
     <color name="colorYellowPrimary">#FFCC33</color>
     <color name="colorBluePrimary">#2D99EF</color>
+    <color name="colorRedPrimary">#EF5350</color>
 
     <!--Secondary-->
     <color name="white">#FFF</color>

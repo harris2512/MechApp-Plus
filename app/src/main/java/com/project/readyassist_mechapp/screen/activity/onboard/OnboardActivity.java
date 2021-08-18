@@ -15,6 +15,7 @@ import com.project.readyassist_mechapp.databinding.ActivityOnboardBinding;
 import com.project.readyassist_mechapp.helper.events.Events;
 import com.project.readyassist_mechapp.helper.events.GlobalBus;
 import com.project.readyassist_mechapp.screen.fragment.FragmentOnboardPersonal;
+import com.project.readyassist_mechapp.screen.fragment.onboard.personal_info.FragmentPersonalOnboard;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -41,32 +42,8 @@ public class OnboardActivity extends AppCompatActivity {
 
     private void init() {
 
-        onboardBinding.layoutOnboardTimeline.tvOnboardTimeFirst.setBackgroundResource(
-                R.drawable.animate_stepper_round);
-        onboardBinding.layoutOnboardTimeline.tvOnboardTimeSecond.setBackgroundResource(
-                R.drawable.animate_stepper_round);
-        onboardBinding.layoutOnboardTimeline.tvOnboardTimeThird.setBackgroundResource(
-                R.drawable.animate_stepper_round);
 
-        onboardBinding.layoutOnboardTimeline.viewOnboardTimeFirst.setBackgroundResource(
-                R.drawable.animate_stepper_line);
-        onboardBinding.layoutOnboardTimeline.viewOnboardTimeSecond.setBackgroundResource(
-                R.drawable.animate_stepper_line);
-
-
-        stepperPersonalAnim = (AnimationDrawable)
-                onboardBinding.layoutOnboardTimeline.tvOnboardTimeFirst.getBackground();
-        stepperDocumentAnim = (AnimationDrawable)
-                onboardBinding.layoutOnboardTimeline.tvOnboardTimeSecond.getBackground();
-        stepperVerifyingAnim = (AnimationDrawable)
-                onboardBinding.layoutOnboardTimeline.tvOnboardTimeThird.getBackground();
-
-        stepperLinePersonal = (AnimationDrawable)
-                onboardBinding.layoutOnboardTimeline.viewOnboardTimeFirst.getBackground();
-        stepperLineDocument = (AnimationDrawable)
-                onboardBinding.layoutOnboardTimeline.viewOnboardTimeSecond.getBackground();
-
-        Fragment fragment = FragmentOnboardPersonal.newInstance();
+        Fragment fragment = FragmentPersonalOnboard.newInstance();
         // fragment.setArguments(b);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frame_onboard, fragment);
@@ -88,27 +65,6 @@ public class OnboardActivity extends AppCompatActivity {
 
         switch (msgFragmentToActivityEvent.getMessage()) {
 
-            case "personal":
-
-
-                break;
-
-            case "document":
-
-                stepperPersonalAnim.start();
-                stepperLinePersonal.start();
-
-                break;
-
-            case "verifying":
-
-                stepperDocumentAnim.start();
-                stepperVerifyingAnim.start();
-
-                stepperLineDocument.start();
-
-
-                break;
 
         }
 

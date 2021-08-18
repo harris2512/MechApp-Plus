@@ -10,6 +10,11 @@
 
     <!--Global-->
     <string name="contentDescription">TODO</string>
+    <string name="digit_text">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ </string>
+    <string name="digit_number">1234567890</string>
+    <string name="digits_email">abcdefghijklmnopqrstuvwxyz1234567890@_-.</string>
+    <string name="digits_caps_alphanumeric">ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</string>
+
 
 
 </resources>

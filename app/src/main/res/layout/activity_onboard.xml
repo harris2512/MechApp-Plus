@@ -7,46 +7,92 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".screen.activity.onboard.OnboardActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linear_onboard_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?android:actionBarSize"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/img_onboard_back"
             android:layout_width="@dimen/sizeFortySix"
-            android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/sizeEight"
-            android:layout_marginEnd="@dimen/sizeEight"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_margin="@dimen/sizeEight"
             android:background="@null"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_back"
-            android:visibility="gone" />
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_onboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/sizeSixteen"
-            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:layout_margin="@dimen/sizeEight"
             android:gravity="center_vertical"
             android:letterSpacing="0.05"
-            android:text="Onboard"
+            android:text="Tell Us \nAbout Yourself"
+            android:textAllCaps="true"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/headline_medium"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/img_onboard_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_current_page_onboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:padding="@dimen/sizeFour"
+            android:text="2"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/body_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_label_slash_onboard"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_slash_onboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:padding="@dimen/sizeFour"
+            android:text="/"
             android:textAppearance="@style/MyTextAppearanceBold"
             android:textColor="@color/black"
             android:textSize="@dimen/body_regular"
-            android:textStyle="bold" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_total_page_onboard"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_total_page_onboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:padding="@dimen/sizeFour"
+            android:text="6"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <include
         android:id="@+id/layout_onboard_timeline"
         layout="@layout/include_onboard_timeline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/linear_onboard_toolbar" />
 
     <FrameLayout
