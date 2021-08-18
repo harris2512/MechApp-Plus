@@ -1,4 +1,4 @@
-package com.project.readyassist_mechapp.screen.fragment;
+package com.project.readyassist_mechapp.screen.fragment.onboard;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
