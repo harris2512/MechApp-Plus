@@ -2,11 +2,11 @@ package com.project.readyassist_mechapp.screen.activity.onboard;
 
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -14,7 +14,6 @@ import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.databinding.ActivityOnboardBinding;
 import com.project.readyassist_mechapp.helper.events.Events;
 import com.project.readyassist_mechapp.helper.events.GlobalBus;
-import com.project.readyassist_mechapp.screen.fragment.FragmentOnboardPersonal;
 import com.project.readyassist_mechapp.screen.fragment.onboard.personal_info.FragmentPersonalOnboard;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -47,9 +46,14 @@ public class OnboardActivity extends AppCompatActivity {
         // fragment.setArguments(b);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frame_onboard, fragment);
+        ft.addToBackStack("a");
         ft.commit();
 
         sendMessageToFragment("");
+
+        onboardBinding.imgOnboardBack.setOnClickListener(v -> {
+            getSupportFragmentManager().popBackStackImmediate();
+        });
 
     }
 
@@ -63,10 +67,43 @@ public class OnboardActivity extends AppCompatActivity {
     @Subscribe
     public void getMessage(Events.FragmentActivityMessage msgFragmentToActivityEvent) {
 
+        onboardBinding.tvCurrentPageOnboard.setText(msgFragmentToActivityEvent.getMessage());
+
         switch (msgFragmentToActivityEvent.getMessage()) {
 
+            case "1":
+                onboardBinding.imgOnboardBack.setVisibility(View.INVISIBLE);
+                break;
+
+            case "2":
+                onboardBinding.imgOnboardBack.setVisibility(View.VISIBLE);
+
+                break;
+
+            case "3":
+                onboardBinding.imgOnboardBack.setVisibility(View.VISIBLE);
+
+                break;
+
+            case "4":
+                onboardBinding.imgOnboardBack.setVisibility(View.VISIBLE);
+
+                break;
+
+            case "5":
+                onboardBinding.imgOnboardBack.setVisibility(View.VISIBLE);
+
+                break;
+
+            case "6":
+                onboardBinding.imgOnboardBack.setVisibility(View.VISIBLE);
+
+                break;
 
         }
+
+
+
 
     }
 

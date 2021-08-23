@@ -4,19 +4,19 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.helper.SessionManager;
 import com.project.readyassist_mechapp.helper.events.Events;
 import com.project.readyassist_mechapp.helper.events.GlobalBus;
+import com.project.readyassist_mechapp.screen.fragment.onboard.address_info.FragmentAddressOnboard;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -58,6 +58,8 @@ public class FragmentPersonalOnboard extends Fragment {
 
     private void init() {
 
+        sendMessageToActivity("1");
+
         initializeVariable();
 
         /*OnClick*/
@@ -90,8 +92,15 @@ public class FragmentPersonalOnboard extends Fragment {
         } else {
             tv_error_onboard_personal.setVisibility(View.INVISIBLE);
 
-        }
 
+            Fragment fragment = FragmentAddressOnboard.newInstance();
+            // fragment.setArguments(b);
+            FragmentTransaction ft = requireActivity().getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frame_onboard, fragment);
+            ft.addToBackStack("b");
+            ft.commit();
+
+        }
 
     }
 
@@ -132,6 +141,12 @@ public class FragmentPersonalOnboard extends Fragment {
     public void getMessage(Events.ActivityFragmentMessage activityFragmentMessage) {
 
 
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        GlobalBus.getBus().unregister(this);
     }
 
 }

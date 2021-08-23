@@ -49,5 +49,7 @@
     <dimen name="sizeEighty">80dp</dimen>
     <dimen name="sizeNinety">90dp</dimen>
     <dimen name="sizeHundred">100dp</dimen>
+    <dimen name="sizeOneFifty">150dp</dimen>
+    <dimen name="sizeTwoHundred">200dp</dimen>
 
 </resources>
