@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:paddingTop="@dimen/sizeTwentyTwo">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vLine_document"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <!--Error Text-->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_error_onboard_document"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/sizeThirtyTwo"
+        android:paddingEnd="@dimen/sizeThirtyTwo"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorRedPrimary"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Aadhar-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_onboard_document_aadhar"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sizeThirtyTwo"
+        app:boxStrokeColor="@color/black"
+        app:hintTextAppearance="@style/MyTextAppearance"
+        app:hintTextColor="@color/colorGreyDark"
+        app:layout_constraintTop_toBottomOf="@id/tv_error_onboard_document"
+        app:startIconDrawable="@drawable/ic_identity_card">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_onboard_document_aadhar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="Aadhar No. *"
+            android:inputType="number"
+            android:letterSpacing="0.05"
+            android:maxLength="12"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingTop="@dimen/sizeEighteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:paddingBottom="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/body_regular"
+            app:hintTextColor="@color/colorGreyDark" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_onboard_document_aadhar_front"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sizeSixty"
+        android:layout_marginStart="@dimen/sizeThirtyTwo"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginEnd="@dimen/sizeSixteen"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_add_image"
+        app:layout_constraintEnd_toEndOf="@id/vLine_document"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_onboard_document_aadhar"
+        app:shapeAppearanceOverlay="@style/shapeableCornerLight" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_onboard_document_aadhar_back"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sizeSixty"
+        android:layout_marginStart="@dimen/sizeSixteen"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginEnd="@dimen/sizeThirtyTwo"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_add_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vLine_document"
+        app:layout_constraintTop_toBottomOf="@+id/input_onboard_document_aadhar"
+        app:shapeAppearanceOverlay="@style/shapeableCornerLight" />
+
+    <!--PAN-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_onboard_document_pan"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sizeThirtyTwo"
+        app:boxStrokeColor="@color/black"
+        app:hintTextAppearance="@style/MyTextAppearance"
+        app:hintTextColor="@color/colorGreyDark"
+        app:layout_constraintTop_toBottomOf="@id/img_onboard_document_aadhar_front"
+        app:startIconDrawable="@drawable/ic_identity_card">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_onboard_document_pan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="PAN No. *"
+            android:inputType="number"
+            android:letterSpacing="0.05"
+            android:maxLength="10"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingTop="@dimen/sizeEighteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:paddingBottom="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/body_regular"
+            app:hintTextColor="@color/colorGreyDark" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_onboard_document_pan_front"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sizeSixty"
+        android:layout_marginStart="@dimen/sizeThirtyTwo"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginEnd="@dimen/sizeSixteen"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_add_image"
+        app:layout_constraintEnd_toEndOf="@id/vLine_document"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_onboard_document_pan"
+        app:shapeAppearanceOverlay="@style/shapeableCornerLight" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_onboard_document_pan_back"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sizeSixty"
+        android:layout_marginStart="@dimen/sizeSixteen"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginEnd="@dimen/sizeThirtyTwo"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_add_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vLine_document"
+        app:layout_constraintTop_toBottomOf="@+id/input_onboard_document_pan"
+        app:shapeAppearanceOverlay="@style/shapeableCornerLight" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_info_onboard_document"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/sizeSixteen"
+        android:paddingStart="@dimen/sizeThirtyTwo"
+        android:paddingEnd="@dimen/sizeThirtyTwo"
+        android:text="( * ) This fields are mandatory to give us."
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreyDark"
+        app:layout_constraintBottom_toTopOf="@+id/tv_onboard_document_next" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_onboard_document_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGreenPrimary"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:padding="@dimen/sizeSixteen"
+        android:text="Next"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/body_regular"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
