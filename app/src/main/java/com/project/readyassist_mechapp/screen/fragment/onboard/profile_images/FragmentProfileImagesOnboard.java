@@ -1,4 +1,4 @@
-package com.project.readyassist_mechapp.screen.fragment.onboard.document_info;
+package com.project.readyassist_mechapp.screen.fragment.onboard.profile_images;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,20 +15,21 @@ import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.helper.SessionManager;
 import com.project.readyassist_mechapp.helper.events.Events;
 import com.project.readyassist_mechapp.helper.events.GlobalBus;
-import com.project.readyassist_mechapp.screen.fragment.onboard.profile_images.FragmentProfileImagesOnboard;
+import com.project.readyassist_mechapp.screen.fragment.onboard.address_info.FragmentAddressOnboard;
+import com.project.readyassist_mechapp.screen.fragment.onboard.document_info.FragmentDocumentOnboard;
 
 import org.greenrobot.eventbus.Subscribe;
 
-public class FragmentDocumentOnboard extends Fragment {
+public class FragmentProfileImagesOnboard extends Fragment {
 
     protected View view;
     protected Fragment selectedFragment;
     protected SessionManager sessionManager;
 
-    protected TextView tv_onboard_document_next;
+    protected TextView tv_onboard_profile_images_next;
 
-    public static FragmentDocumentOnboard newInstance() {
-        return new FragmentDocumentOnboard();
+    public static FragmentProfileImagesOnboard newInstance() {
+        return new FragmentProfileImagesOnboard();
     }
 
 
@@ -41,7 +42,7 @@ public class FragmentDocumentOnboard extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_document_info, container, false);
+        view = inflater.inflate(R.layout.fragment_profile_images, container, false);
 
         // sessionManager = new SessionManager(getActivity());
 
@@ -55,7 +56,7 @@ public class FragmentDocumentOnboard extends Fragment {
 
     private void init() {
 
-        sendMessageToActivity("4");
+        sendMessageToActivity("3");
 
         initializeVariable();
 
@@ -63,15 +64,15 @@ public class FragmentDocumentOnboard extends Fragment {
 
     private void initializeVariable() {
 
-        tv_onboard_document_next = view.findViewById(R.id.tv_onboard_document_next);
+        tv_onboard_profile_images_next = view.findViewById(R.id.tv_onboard_profile_images_next);
 
-        tv_onboard_document_next.setOnClickListener(v -> {
+        tv_onboard_profile_images_next.setOnClickListener(v -> {
 
-            Fragment fragment = FragmentProfileImagesOnboard.newInstance();
+            Fragment fragment = FragmentDocumentOnboard.newInstance();
             // fragment.setArguments(b);
             FragmentTransaction ft = requireActivity().getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.frame_onboard, fragment);
-            ft.addToBackStack("e");
+            ft.addToBackStack("d");
             ft.commit();
 
         });
@@ -98,7 +99,3 @@ public class FragmentDocumentOnboard extends Fragment {
     }
 
 }
-
-
-
-
