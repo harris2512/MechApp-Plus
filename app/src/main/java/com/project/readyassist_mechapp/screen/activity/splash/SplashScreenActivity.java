@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.databinding.SplashScreenBinding;
-import com.project.readyassist_mechapp.screen.activity.SignInActivity;
+import com.project.readyassist_mechapp.screen.activity.signin.SignInActivity;
 
 
 public class SplashScreenActivity extends AppCompatActivity {
@@ -31,9 +31,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             screenBinding.layoutSplash.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
         }
 
-
         init();
-
 
     }
 
@@ -44,7 +42,6 @@ public class SplashScreenActivity extends AppCompatActivity {
             startActivity(new Intent(this, SignInActivity.class));
             finish();
         }, 2000);
-
 
     }
 

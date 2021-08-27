@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/bg_gray_screen_top_corner"
     android:paddingTop="@dimen/sizeTwentyTwo">
 
     <androidx.constraintlayout.widget.Guideline
@@ -36,8 +36,7 @@
         app:layout_constraintEnd_toEndOf="@id/vLine_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_error_onboard_profile_images"
-        app:shapeAppearanceOverlay="@style/shapeableCornerLight"
-        app:tint="@color/colorGreyDark" />
+        app:shapeAppearanceOverlay="@style/shapeableCornerLight" />
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="0dp"
@@ -45,7 +44,7 @@
         android:padding="@dimen/sizeSixteen"
         android:paddingStart="@dimen/sizeSixteen"
         android:paddingEnd="@dimen/sizeSixteen"
-        android:text="Your profile image *"
+        android:text="@string/label_profile_image"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/colorGreyDark"
         android:textSize="@dimen/caption_regular"
@@ -66,8 +65,7 @@
         app:layout_constraintEnd_toEndOf="@id/vLine_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_onboard_profile_self"
-        app:shapeAppearanceOverlay="@style/shapeableCornerLight"
-        app:tint="@color/colorGreyDark" />
+        app:shapeAppearanceOverlay="@style/shapeableCornerLight" />
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="0dp"
@@ -75,7 +73,7 @@
         android:padding="@dimen/sizeSixteen"
         android:paddingStart="@dimen/sizeSixteen"
         android:paddingEnd="@dimen/sizeSixteen"
-        android:text="Your workspace / garage image"
+        android:text="@string/label_profile_garage_image"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/colorGreyDark"
         android:textSize="@dimen/caption_regular"
@@ -84,28 +82,15 @@
         app:layout_constraintStart_toStartOf="@id/vLine_profile"
         app:layout_constraintTop_toTopOf="@+id/img_onboard_profile_work" />
 
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_info_onboard_profile_images_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/sizeSixteen"
-        android:paddingStart="@dimen/sizeThirtyTwo"
-        android:paddingEnd="@dimen/sizeThirtyTwo"
-        android:text="( * ) This fields are mandatory to give us."
-        android:textAppearance="@style/MyTextAppearance"
-        android:textColor="@color/colorGreyDark"
-        app:layout_constraintBottom_toTopOf="@+id/tv_onboard_profile_images_next" />
-
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_onboard_profile_images_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorGreenPrimary"
+        android:background="@drawable/bg_fill_primary_box"
         android:gravity="center"
         android:letterSpacing="0.1"
         android:padding="@dimen/sizeSixteen"
-        android:text="Next"
+        android:text="@string/label_next"
         android:textAllCaps="true"
         android:textAppearance="@style/MyTextAppearanceBold"
         android:textColor="@color/white"
@@ -113,28 +98,5 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    <ImageButton
-        android:layout_width="@dimen/sizeThirty"
-        android:layout_height="@dimen/sizeThirty"
-        android:layout_marginEnd="@dimen/sizeSixteen"
-        android:layout_marginBottom="@dimen/sizeSixteen"
-        android:background="@drawable/ic_oval_grey"
-        android:contentDescription="@string/contentDescription"
-        android:src="@drawable/ic_plus_round"
-        app:layout_constraintBottom_toBottomOf="@id/img_onboard_profile_self"
-        app:layout_constraintEnd_toEndOf="@+id/img_onboard_profile_self"
-        app:tint="@color/black" />
-
-    <ImageButton
-        android:layout_width="@dimen/sizeThirty"
-        android:layout_height="@dimen/sizeThirty"
-        android:layout_marginEnd="@dimen/sizeSixteen"
-        android:layout_marginBottom="@dimen/sizeSixteen"
-        android:background="@drawable/ic_oval_grey"
-        android:contentDescription="@string/contentDescription"
-        android:src="@drawable/ic_plus_round"
-        app:layout_constraintBottom_toBottomOf="@id/img_onboard_profile_work"
-        app:layout_constraintEnd_toEndOf="@+id/img_onboard_profile_work"
-        app:tint="@color/black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

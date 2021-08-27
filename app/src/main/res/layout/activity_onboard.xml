@@ -19,88 +19,80 @@
             android:layout_width="@dimen/sizeFortySix"
             android:layout_height="@dimen/sizeFortySix"
             android:layout_margin="@dimen/sizeEight"
-            android:background="@null"
+            android:background="?attr/selectableItemBackground"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_back"
-            android:visibility="invisible"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textview.MaterialTextView
+        <com.project.readyassist_mechapp.utils.MyAppBold
             android:id="@+id/tv_label_onboard"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/sizeEight"
-            android:layout_marginEnd="@dimen/sizeEight"
-            android:layout_marginTop="@dimen/sizeSixteen"
+            android:layout_margin="@dimen/sizeEight"
             android:gravity="center_vertical"
             android:letterSpacing="0.05"
-            android:text="Tell Us \nAbout Yourself"
             android:textAllCaps="true"
-            android:textAppearance="@style/MyTextAppearanceBold"
             android:textColor="@color/black"
             android:textSize="@dimen/headline_medium"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/img_onboard_back"
+            app:layout_constraintEnd_toStartOf="@+id/tv_current_page_onboard"
             app:layout_constraintStart_toEndOf="@id/img_onboard_back"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/img_onboard_back" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_current_page_onboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/sizeSixteen"
             android:padding="@dimen/sizeFour"
             android:text="1"
             android:textAppearance="@style/MyTextAppearanceBold"
             android:textColor="@color/colorGreyDark"
             android:textSize="@dimen/body_regular"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_onboard"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tv_label_slash_onboard"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/tv_label_onboard" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_label_slash_onboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/sizeSixteen"
             android:padding="@dimen/sizeFour"
             android:text="/"
             android:textAppearance="@style/MyTextAppearanceBold"
             android:textColor="@color/black"
             android:textSize="@dimen/body_regular"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_onboard"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tv_total_page_onboard"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/tv_label_onboard" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_total_page_onboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/sizeSixteen"
             android:layout_marginEnd="@dimen/sizeEight"
             android:padding="@dimen/sizeFour"
             android:text="6"
             android:textAppearance="@style/MyTextAppearanceBold"
             android:textColor="@color/black"
             android:textSize="@dimen/body_regular"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_onboard"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/tv_label_onboard" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <include
-        android:id="@+id/layout_onboard_timeline"
-        layout="@layout/include_onboard_timeline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@+id/linear_onboard_toolbar" />
 
     <FrameLayout
         android:id="@+id/frame_onboard"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@drawable/bg_gray_screen_top_corner"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_onboard_timeline" />
+        app:layout_constraintTop_toBottomOf="@id/linear_onboard_toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

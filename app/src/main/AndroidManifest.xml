@@ -17,11 +17,21 @@
 
 
         <activity android:name=".screen.activity.splash.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
-            android:name=".screen.activity.SignInActivity"
+            android:name=".screen.activity.signin.SignInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/status_bar_transparent"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".screen.activity.homepage.HomePage"
             android:screenOrientation="portrait"
             android:theme="@style/status_bar_transparent"
             android:windowSoftInputMode="adjustPan" />
@@ -30,15 +40,16 @@
             android:name=".screen.activity.onboard.OnboardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/status_bar_transparent"
-            android:windowSoftInputMode="adjustPan" >
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:windowSoftInputMode="adjustPan">
 
         </activity>
+
+        <activity
+            android:name=".screen.activity.vendor_skill.VendorSkillActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/status_bar_transparent"
+            android:windowSoftInputMode="adjustPan" />
+
 
     </application>
 

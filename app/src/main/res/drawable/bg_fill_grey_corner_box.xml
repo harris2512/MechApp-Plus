@@ -1,0 +1,17 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="@color/colorWhiteSmoke"
+    tools:targetApi="lollipop">
+
+    <item>
+        <shape>
+            <gradient
+                android:angle="135"
+                android:centerColor="@color/colorInputFieldBg"
+                android:endColor="@color/colorInputFieldBg"
+                android:startColor="@color/colorInputFieldBg" />
+            <corners android:radius="@dimen/sizeFour" />
+        </shape>
+    </item>
+
+</ripple>

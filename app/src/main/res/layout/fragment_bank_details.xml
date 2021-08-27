@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gray_screen_top_corner"
+    android:paddingTop="@dimen/sizeTwentyTwo">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vLine_bank_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/tv_onboard_bank_next"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/sizeThirtyTwo"
+            android:fitsSystemWindows="true">
+
+            <!--Error Text-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_error_onboard_bank_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/sizeThirtyTwo"
+                android:paddingEnd="@dimen/sizeThirtyTwo"
+                android:textAppearance="@style/MyTextAppearance"
+                android:textColor="@color/colorRedPrimary"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--Bank IFSC-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_label_onboard_bank_ifsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeThirtyTwo"
+                android:layout_marginTop="@dimen/sizeSixteen"
+                android:layout_marginEnd="@dimen/sizeThirtyTwo"
+                android:letterSpacing="0.05"
+                android:paddingStart="@dimen/sizeEight"
+                android:paddingEnd="@dimen/sizeEight"
+                android:text="@string/label_bank_ifsc_required"
+                android:textAppearance="@style/MyTextAppearanceBold"
+                android:textSize="@dimen/body_regular"
+                app:layout_constraintTop_toBottomOf="@+id/tv_error_onboard_bank_details" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_onboard_bank_ifsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeThirtyTwo"
+                android:layout_marginTop="@dimen/sizeSixteen"
+                android:layout_marginEnd="@dimen/sizeThirtyTwo"
+                android:background="@drawable/bg_fill_gray_editext"
+                android:digits="@string/digit_number"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_bank_ifsc_required"
+                android:inputType="number"
+                android:letterSpacing="0.05"
+                android:maxLength="12"
+                android:padding="@dimen/sizeTwelve"
+                android:singleLine="true"
+                android:textAppearance="@style/MyTextAppearance"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/body_regular"
+                app:hintTextColor="@color/colorGreyDark"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_onboard_bank_ifsc" />
+
+            <!--Bank Name-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_label_onboard_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeThirtyTwo"
+                android:layout_marginTop="@dimen/sizeThirtyTwo"
+                android:layout_marginEnd="@dimen/sizeThirtyTwo"
+                android:letterSpacing="0.05"
+                android:paddingStart="@dimen/sizeEight"
+                android:paddingEnd="@dimen/sizeEight"
+                android:text="@string/label_bank_name_required"
+                android:textAppearance="@style/MyTextAppearanceBold"
+                android:textSize="@dimen/body_regular"
+                app:layout_constraintTop_toBottomOf="@+id/edt_onboard_bank_ifsc" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_onboard_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeThirtyTwo"
+                android:layout_marginTop="@dimen/sizeSixteen"
+                android:layout_marginEnd="@dimen/sizeThirtyTwo"
+                android:background="@drawable/bg_fill_gray_editext"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_bank_name_required"
+                android:inputType="text"
+                android:letterSpacing="0.05"
+                android:padding="@dimen/sizeTwelve"
+                android:singleLine="true"
+                android:textAppearance="@style/MyTextAppearance"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/body_regular"
+                app:hintTextColor="@color/colorGreyDark"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_onboard_bank_name" />
+
+            <!--Bank Account No-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_label_onboard_bank_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeThirtyTwo"
+                android:layout_marginTop="@dimen/sizeThirtyTwo"
+                android:layout_marginEnd="@dimen/sizeThirtyTwo"
+                android:letterSpacing="0.05"
+                android:paddingStart="@dimen/sizeEight"
+                android:paddingEnd="@dimen/sizeEight"
+                android:text="@string/label_bank_account_no_required"
+                android:textAppearance="@style/MyTextAppearanceBold"
+                android:textSize="@dimen/body_regular"
+                app:layout_constraintTop_toBottomOf="@+id/edt_onboard_bank_name" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_onboard_bank_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeThirtyTwo"
+                android:layout_marginTop="@dimen/sizeSixteen"
+                android:layout_marginEnd="@dimen/sizeThirtyTwo"
+                android:background="@drawable/bg_fill_gray_editext"
+                android:digits="@string/digit_number"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_bank_account_no_required"
+                android:inputType="number"
+                android:letterSpacing="0.05"
+                android:maxLength="16"
+                android:padding="@dimen/sizeTwelve"
+                android:singleLine="true"
+                android:textAppearance="@style/MyTextAppearance"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/body_regular"
+                app:hintTextColor="@color/colorGreyDark"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_onboard_bank_account" />
+
+            <!--Bank Holder Name-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_label_onboard_bank_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeThirtyTwo"
+                android:layout_marginTop="@dimen/sizeThirtyTwo"
+                android:layout_marginEnd="@dimen/sizeThirtyTwo"
+                android:letterSpacing="0.05"
+                android:paddingStart="@dimen/sizeEight"
+                android:paddingEnd="@dimen/sizeEight"
+                android:text="@string/label_bank_holder_required"
+                android:textAppearance="@style/MyTextAppearanceBold"
+                android:textSize="@dimen/body_regular"
+                app:layout_constraintTop_toBottomOf="@+id/edt_onboard_bank_account" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_onboard_bank_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeThirtyTwo"
+                android:layout_marginTop="@dimen/sizeSixteen"
+                android:layout_marginEnd="@dimen/sizeThirtyTwo"
+                android:background="@drawable/bg_fill_gray_editext"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_bank_holder_required"
+                android:inputType="text"
+                android:letterSpacing="0.05"
+                android:padding="@dimen/sizeTwelve"
+                android:singleLine="true"
+                android:textAppearance="@style/MyTextAppearance"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/body_regular"
+                app:hintTextColor="@color/colorGreyDark"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_onboard_bank_holder" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_onboard_bank_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_fill_primary_box"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:padding="@dimen/sizeSixteen"
+        android:text="@string/label_continue"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/body_regular"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

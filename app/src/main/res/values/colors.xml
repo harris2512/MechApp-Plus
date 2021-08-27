@@ -5,20 +5,23 @@
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#FDFDFD</color>
     <color name="colorAccent">#1E1E1E</color>
-    <color name="colorGreenPrimary">#1CCC5F</color>
-    <color name="colorGreenPrimaryDark">#17C158</color>
+    <color name="colorGreenPrimary">#4CAF50</color>
+    <color name="colorGreenPrimaryDark">#43A047</color>
     <color name="colorYellowPrimary">#FFCC33</color>
     <color name="colorBluePrimary">#2D99EF</color>
     <color name="colorRedPrimary">#EF5350</color>
 
     <!--Secondary-->
-    <color name="white">#FFF</color>
+    <color name="white">#FFFFFF</color>
     <color name="black">#000</color>
     <color name="colorYellowLight">#80FFCC33</color>
     <color name="colorGreyLight">#BCBCBC</color>
     <color name="colorGreyDark">#808080</color>
-    <color name="colorInputFieldBg">#F8F8F8</color>
-    <color name="colorWhiteSmoke">#F1F1F1</color>
+    <color name="colorInputFieldBg">#EAEAEA</color>
+    <color name="colorWhiteSmoke">#F6F6F6</color>
     <color name="colorViewBorder">#F5F5F5</color>
+    <color name="colorNightBlueDark">#E21B3643</color>
+    <color name="colorNightBlueLight">#401B3643</color>
+    <color name="colorWaterGreen">#80E8F5E9</color>
 
 </resources>

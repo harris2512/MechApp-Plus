@@ -1,4 +1,4 @@
-package com.project.readyassist_mechapp.screen;
+package com.project.readyassist_mechapp.screen.fragment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

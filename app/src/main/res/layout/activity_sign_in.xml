@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".screen.activity.SignInActivity">
+    tools:context=".screen.activity.signin.SignInActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/hLine_signin"
@@ -22,6 +22,7 @@
         app:layout_constraintGuide_percent=".5" />
 
     <ImageView
+        android:id="@+id/img_signin_banner"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:alpha="0.9"
@@ -37,7 +38,7 @@
         android:gravity="center_vertical"
         android:letterSpacing="0.05"
         android:padding="@dimen/sizeSixteen"
-        android:text="Please sign-in to continue."
+        android:text="@string/label_signin_top"
         android:textAppearance="@style/MyTextAppearanceBold"
         android:textColor="@color/colorAccent"
         android:textSize="@dimen/body_regular"
@@ -54,10 +55,10 @@
         android:background="@drawable/bg_fill_gray_editext"
         android:drawableStart="@drawable/ic_mobile_phone"
         android:drawablePadding="@dimen/sizeEight"
-        android:hint="Mobile No."
+        android:hint="@string/hint_signin_mobile"
         android:inputType="number"
         android:letterSpacing="0.05"
-        android:padding="@dimen/sizeSixteen"
+        android:padding="@dimen/sizeTwelve"
         android:singleLine="true"
         android:textAppearance="@style/MyTextAppearanceBold"
         android:textColor="@color/black"
@@ -75,11 +76,11 @@
         android:background="@drawable/bg_fill_gray_editext"
         android:drawableStart="@drawable/ic_otp"
         android:drawablePadding="@dimen/sizeEight"
-        android:hint="OTP"
+        android:hint="@string/hint_signin_otp"
         android:inputType="number"
         android:letterSpacing="0.5"
         android:maxLength="5"
-        android:padding="@dimen/sizeSixteen"
+        android:padding="@dimen/sizeTwelve"
         android:singleLine="true"
         android:textAppearance="@style/MyTextAppearanceBold"
         android:textColor="@color/black"
@@ -102,7 +103,7 @@
         android:letterSpacing="0.1"
         android:paddingStart="@dimen/sizeSixteen"
         android:paddingEnd="@dimen/sizeSixteen"
-        android:text="Send OTP"
+        android:text="@string/hint_signin_send_otp"
         android:textAllCaps="false"
         android:textAppearance="@style/MyTextAppearanceBold"
         android:textColor="@color/white"
@@ -117,22 +118,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/sizeEight"
         android:letterSpacing="0.05"
+        android:background="?attr/selectableItemBackground"
         android:padding="@dimen/sizeEight"
-        android:text="Edit"
+        android:text="@string/label_signin_edit"
         android:textAppearance="@style/MyTextAppearanceBold"
         android:textColor="@color/colorGreyDark"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/edt_signin_mobile"
         app:layout_constraintEnd_toEndOf="@+id/edt_signin_mobile"
         app:layout_constraintTop_toTopOf="@id/edt_signin_mobile" />
-
-    <ImageView
-        android:id="@+id/rocket_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:contentDescription="@string/contentDescription"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -83,7 +83,7 @@ public class FragmentAddressOnboard extends Fragment {
     private void checkInputFieldsValidation() {
 
         if (!isLocationValid()) {
-            setErrorInputField("Please provide your valid location.");
+            setErrorInputField(getString(R.string.err_provide_location));
         } else {
             tv_error_onboard_address.setVisibility(View.INVISIBLE);
 
@@ -91,7 +91,7 @@ public class FragmentAddressOnboard extends Fragment {
             // fragment.setArguments(b);
             FragmentTransaction ft = requireActivity().getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.frame_onboard, fragment);
-            ft.addToBackStack("c");
+            ft.addToBackStack("b");
             ft.commit();
 
         }
@@ -104,7 +104,7 @@ public class FragmentAddressOnboard extends Fragment {
     }
 
     private boolean isLocationValid() {
-        return edt_onboard_address_location.getText().toString().trim().length() > 5;
+        return edt_onboard_address_location.getText().toString().trim().length() > 1;
     }
 
 

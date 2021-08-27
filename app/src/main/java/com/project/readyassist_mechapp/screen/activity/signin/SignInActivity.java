@@ -1,4 +1,4 @@
-package com.project.readyassist_mechapp.screen.activity;
+package com.project.readyassist_mechapp.screen.activity.signin;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -10,7 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.databinding.ActivitySignInBinding;
+import com.project.readyassist_mechapp.screen.activity.homepage.HomePage;
 import com.project.readyassist_mechapp.screen.activity.onboard.OnboardActivity;
+import com.project.readyassist_mechapp.screen.activity.vendor_skill.VendorSkillActivity;
+
+import java.util.Objects;
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -21,23 +25,16 @@ public class SignInActivity extends AppCompatActivity {
     protected ActivitySignInBinding signInBinding;
 
 
-
-
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         signInBinding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(signInBinding.getRoot());
 
-
-//        signInBinding.rocketImage.setBackgroundResource(R.drawable.animate_file);
-
-
         signInBinding.btnSigninSubmit.setOnClickListener(v -> {
 
             if (isSignInClick) {
-                startActivity(new Intent(this, OnboardActivity.class));
+                startActivity(new Intent(this, HomePage.class));
                 return;
             }
 
@@ -47,7 +44,7 @@ public class SignInActivity extends AppCompatActivity {
 
                 isSignInClick = true;
                 signInBinding.edtSigninMobile.setEnabled(false);
-                signInBinding.btnSigninSubmit.setText("Sign In");
+                signInBinding.btnSigninSubmit.setText(R.string.label_sign_in);
                 return;
             }
 
@@ -56,7 +53,7 @@ public class SignInActivity extends AppCompatActivity {
 
             isSignInClick = false;
             signInBinding.edtSigninMobile.setEnabled(true);
-            signInBinding.btnSigninSubmit.setText("Send OTP");
+            signInBinding.btnSigninSubmit.setText(R.string.label_send_otp);
 
         });
 
@@ -66,10 +63,15 @@ public class SignInActivity extends AppCompatActivity {
                 signInBinding.tvSigninEdit.setVisibility(View.GONE);
 
                 isSignInClick = false;
-                signInBinding.edtSigninOtp.getText().clear();
+                Objects.requireNonNull(signInBinding.edtSigninOtp.getText()).clear();
                 signInBinding.edtSigninMobile.setEnabled(true);
-                signInBinding.btnSigninSubmit.setText("Send OTP");
+                signInBinding.btnSigninSubmit.setText(R.string.label_send_otp);
             }
+        });
+
+
+        signInBinding.imgSigninBanner.setOnClickListener(v -> {
+            startActivity(new Intent(this, VendorSkillActivity.class));
         });
 
     }

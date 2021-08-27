@@ -15,6 +15,7 @@ import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.helper.SessionManager;
 import com.project.readyassist_mechapp.helper.events.Events;
 import com.project.readyassist_mechapp.helper.events.GlobalBus;
+import com.project.readyassist_mechapp.screen.fragment.onboard.gstin_info.FragmentGSTINOnboard;
 import com.project.readyassist_mechapp.screen.fragment.onboard.profile_images.FragmentProfileImagesOnboard;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -67,11 +68,11 @@ public class FragmentDocumentOnboard extends Fragment {
 
         tv_onboard_document_next.setOnClickListener(v -> {
 
-            Fragment fragment = FragmentProfileImagesOnboard.newInstance();
+            Fragment fragment = FragmentGSTINOnboard.newInstance();
             // fragment.setArguments(b);
             FragmentTransaction ft = requireActivity().getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.frame_onboard, fragment);
-            ft.addToBackStack("e");
+            ft.addToBackStack("d");
             ft.commit();
 
         });

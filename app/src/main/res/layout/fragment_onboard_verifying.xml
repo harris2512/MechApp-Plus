@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="@dimen/sizeThirtyTwo">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_onboard_verifying"
@@ -24,7 +25,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_margin="@dimen/sizeSixteen"
         android:letterSpacing="0.05"
         android:padding="@dimen/sizeSixteen"
         android:text="@string/label_verifying_desc"
@@ -32,12 +33,11 @@
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/lottie_onboard_verifying" />
 
-
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/btn_onboard_verifying_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorGreenPrimary"
+        android:background="@drawable/bg_fill_primary_box"
         android:gravity="center"
         android:letterSpacing="0.1"
         android:padding="@dimen/sizeSixteen"

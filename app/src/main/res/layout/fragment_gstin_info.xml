@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gray_screen_top_corner"
+    android:paddingTop="@dimen/sizeTwentyTwo">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vLine_gstin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <!--Error Text-->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_error_onboard_gstin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/sizeThirtyTwo"
+        android:paddingEnd="@dimen/sizeThirtyTwo"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorRedPrimary"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check_onboard_gstin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sizeThirtyTwo"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:layout_marginEnd="@dimen/sizeThirtyTwo"
+        android:checked="false"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.05"
+        android:text="@string/label_gstin_registration"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/tv_error_onboard_gstin" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_onboard_gstin_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sizeThirtyTwo"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginEnd="@dimen/sizeThirtyTwo"
+        android:letterSpacing="0.05"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingEnd="@dimen/sizeEight"
+        android:text="@string/label_gstin_no_required"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textSize="@dimen/body_regular"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/check_onboard_gstin" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_onboard_gstin_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sizeThirtyTwo"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginEnd="@dimen/sizeThirtyTwo"
+        android:background="@drawable/bg_fill_gray_editext"
+        android:digits="@string/digit_number"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_gstin_no_required"
+        android:inputType="number"
+        android:letterSpacing="0.05"
+        android:maxLength="12"
+        android:padding="@dimen/sizeTwelve"
+        android:singleLine="true"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/body_regular"
+        android:visibility="gone"
+        app:hintTextColor="@color/colorGreyDark"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_onboard_gstin_no" />
+
+    <ImageButton
+        android:id="@+id/img_check_onboard_gstin"
+        android:layout_width="@dimen/sizeTwentySix"
+        android:layout_height="@dimen/sizeTwentySix"
+        android:layout_marginEnd="@dimen/sizeSixteen"
+        android:background="@drawable/ic_oval_grey"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_arrow_forward"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/edt_onboard_gstin_no"
+        app:layout_constraintEnd_toEndOf="@+id/edt_onboard_gstin_no"
+        app:layout_constraintTop_toTopOf="@id/edt_onboard_gstin_no" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_onboard_gstin_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sizeThirtyTwo"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginEnd="@dimen/sizeThirtyTwo"
+        android:background="@drawable/bg_fill_gray_editext"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/edt_onboard_gstin_no">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeFour"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeFour"
+            android:paddingEnd="@dimen/sizeFour"
+            android:text="@string/label_dummy_name"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/caption_regular" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeFour"
+            android:text="@string/label_dummy_address"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/caption_regular" />
+
+    </LinearLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check_onboard_terms_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sizeThirtyTwo"
+        android:checked="false"
+        android:gravity="top"
+        android:letterSpacing="0.05"
+        android:text="@string/label_ra_terms_conditions_policy"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/linear_onboard_gstin_details" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_onboard_gstin_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_fill_primary_box"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:padding="@dimen/sizeSixteen"
+        android:text="@string/label_next"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/body_regular"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

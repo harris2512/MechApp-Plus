@@ -1,12 +1,86 @@
 <resources>
 
-
     <string name="app_name">MechApp\nPlus</string>
+    <string name="label_mechapp">MechApp</string>
 
+    <!--Sign In-->
+    <string name="label_signin_top">Please sign-in to continue.</string>
+    <string name="hint_signin_mobile">Mobile No.</string>
+    <string name="hint_signin_otp">OTP</string>
+    <string name="hint_signin_send_otp">Send OTP</string>
+    <string name="label_signin_edit">Edit</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_send_otp">Send OTP</string>
+
+    <!--On Board-->
+    <string name="label_tell_us">Tell Us</string>
+    <string name="label_onboard_personal_info">Personal Info.</string>
+    <string name="label_onboard_address_info">Address Info.</string>
+    <string name="label_onboard_profile_images_info">Your Images.</string>
+    <string name="label_onboard_identity_info">Identity Info.</string>
+    <string name="label_onboard_gstin_info">GSTIN Info.</string>
+    <string name="label_onboard_bank_info">Bank Info.</string>
+
+    <!--Onboard Personal-->
+    <string name="label_full_name_required">Full Name *</string>
+    <string name="hint_full_name_required">Ex. Jack Sparrow</string>
+    <string name="label_email_id_personal">Email ID (optional)</string>
+    <string name="hint_email_id_personal">Ex. jack07@mail.com</string>
+    <string name="label_additional_mobile_personal">Additional Mobile No. (optional)</string>
+    <string name="hint_additional_mobile_personal">Ex. 9500****08</string>
+    <string name="err_provide_full_name">Your full name is mandatory for us.</string>
+    <string name="err_provide_valid_email">Please provide valid email id.</string>
+    <string name="err_mobile_no_digits">Mobile No. must be 10 digits.</string>
+
+    <!--Onboard Address-->
+    <string name="label_location_required">Location *</string>
+    <string name="hint_location_required">Ex. Bengaluru</string>
+    <string name="label_address_optional">Address 1 (optional)</string>
+    <string name="hint_address_optional">Ex. Building No., Street, Landmark</string>
+    <string name="label_address2_optional">Address 2 (optional)</string>
+    <string name="hint_address2_optional">Ex. Locality, Pincode.,</string>
+    <string name="err_provide_location">Please provide your valid location.</string>
+
+    <!--Onboard Profile Images-->
+    <string name="label_profile_image">Your profile image *</string>
+    <string name="label_profile_garage_image">Your workspace / garage image (optional)</string>
+
+    <!--Onboard Document-->
+    <string name="label_aadhar_required">Aadhar Number *</string>
+    <string name="hint_aadhar_required">Enter 12 digit number</string>
+    <string name="label_pan_required">PAN Number *</string>
+    <string name="hint_pan_required">Enter 10 digit number</string>
+
+    <!--Onboard GSTIN-->
+    <string name="label_gstin_registration">I have GST Registration</string>
+    <string name="label_ra_terms_conditions_policy"><![CDATA[I agree to the ReadyAssist Terms & Conditions and the Privacy Policy. *]]></string>
+    <string name="hint_gstin_no_required">Enter your GST number</string>
+    <string name="label_gstin_no_required">GSTIN *</string>
+
+    <!--Onboard Bank Details-->
+    <string name="label_bank_ifsc_required">IFSC *</string>
+    <string name="hint_bank_ifsc_required">Ex. IBC0***1</string>
+    <string name="label_bank_name_required">Bank Name *</string>
+    <string name="hint_bank_name_required">Ex. Axis., ICICI</string>
+    <string name="label_bank_account_no_required">Account No. *</string>
+    <string name="hint_bank_account_no_required">Ex. 0099********1234</string>
+    <string name="label_bank_holder_required">Account Holder Name *</string>
+    <string name="hint_bank_holder_required">Ex. Jack Sparrow</string>
 
     <!--Onboard Verifying-->
     <string name="label_verifying_desc">Your personal information and required documents are successfully has updated by you.\n\nYour profile information like:\n1. Name, email, mobile number and Address.\n2. GST Registration, Aadhar number, PAN number and Bank account details.\n3. Uploaded images of profile, aadhar and PAN.\n\nThanks to submit for review your Information and Documents. Will contact you once we verified your profile. it will may take maximum 72 hours from you submitted.
     </string>
+
+    <!--Vendor Skill-->
+    <string name="label_my_skill">My Skill</string>
+    <string name="label_day">Day</string>
+    <string name="label_night">Night</string>
+    <string name="label_extra_terrain_charge">Extra Terrain Charge</string>
+    <string name="label_remove">Remove</string>
+    <string name="label_charges_for_service">Charges for Service :</string>
+    <string name="lable_per_km">/Km</string>
+    <string name="label_created_at">Created at</string>
+
 
     <!--Global-->
     <string name="contentDescription">TODO</string>
@@ -14,7 +88,11 @@
     <string name="digit_number">1234567890</string>
     <string name="digits_email">abcdefghijklmnopqrstuvwxyz1234567890@_-.</string>
     <string name="digits_caps_alphanumeric">ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</string>
-
+    <string name="label_next">Next</string>
+    <string name="label_submit">Submit</string>
+    <string name="label_continue">Continue</string>
+    <string name="label_dummy_address">The Pearl, 1537, 5th Main Rd, Sector 7, HSR Layout, Bengaluru, Karnataka 560102</string>
+    <string name="label_dummy_name">Jack Sparorw</string>
 
 
 </resources>

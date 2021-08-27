@@ -1,4 +1,4 @@
-package com.project.readyassist_mechapp.screen.fragment;
+package com.project.readyassist_mechapp.screen.fragment.onboard.verifying;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.helper.SessionManager;
@@ -19,18 +18,18 @@ import com.project.readyassist_mechapp.helper.events.GlobalBus;
 
 import org.greenrobot.eventbus.Subscribe;
 
-public class FragmentOnboardDocument extends Fragment implements View.OnClickListener {
+public class FragmentOnboardVerifying extends Fragment implements View.OnClickListener {
 
 
     protected View view;
     protected Fragment selectedFragment;
     protected SessionManager sessionManager;
 
-    protected TextView btn_onboard_document_submit;
+    protected TextView btn_onboard_verifying_submit;
 
 
-    public static FragmentOnboardDocument newInstance() {
-        return new FragmentOnboardDocument();
+    public static FragmentOnboardVerifying newInstance() {
+        return new FragmentOnboardVerifying();
     }
 
 
@@ -43,7 +42,7 @@ public class FragmentOnboardDocument extends Fragment implements View.OnClickLis
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_onboard_document, container, false);
+        view = inflater.inflate(R.layout.fragment_onboard_verifying, container, false);
 
         // sessionManager = new SessionManager(getActivity());
 
@@ -52,7 +51,6 @@ public class FragmentOnboardDocument extends Fragment implements View.OnClickLis
 
         init();
 
-
         return view;
     }
 
@@ -60,13 +58,13 @@ public class FragmentOnboardDocument extends Fragment implements View.OnClickLis
 
         initializeVariable();
 
-        sendMessageToActivity("document");
+        sendMessageToActivity("7");
 
-        btn_onboard_document_submit.setOnClickListener(this);
+        btn_onboard_verifying_submit.setOnClickListener(this);
     }
 
     private void initializeVariable() {
-        btn_onboard_document_submit = view.findViewById(R.id.btn_onboard_document_submit);
+        btn_onboard_verifying_submit = view.findViewById(R.id.btn_onboard_verifying_submit);
     }
 
 
@@ -75,14 +73,8 @@ public class FragmentOnboardDocument extends Fragment implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
 
-            case R.id.btn_onboard_document_submit:
-
-                Fragment fragment = FragmentOnboardVerifying.newInstance();
-                // fragment.setArguments(b);
-                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.frame_onboard, fragment);
-                ft.commit();
-
+            case R.id.btn_onboard_verifying_submit:
+                requireActivity().finish();
                 break;
 
         }

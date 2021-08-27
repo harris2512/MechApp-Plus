@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_margin="@dimen/sizeEight"
-            android:text="MechApp"
+            android:text="@string/label_mechapp"
             android:textAppearance="@style/MyTextAppearanceBold"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/headline_regular_2" />

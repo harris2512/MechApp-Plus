@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".screen.activity.vendor_skill.VendorSkillActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linear_vendor_skill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/img_vendor_skill_back"
+                android:layout_width="@dimen/sizeFortySix"
+                android:layout_height="@dimen/sizeFortySix"
+                android:layout_margin="@dimen/sizeEight"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/ic_back"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/sizeEight"
+                android:gravity="center_vertical"
+                android:letterSpacing="0.05"
+                android:text="@string/label_my_skill"
+                android:textAllCaps="true"
+                android:textAppearance="@style/MyTextAppearanceBold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/headline_medium"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/img_vendor_skill_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/img_vendor_skill_back"
+                app:layout_constraintTop_toTopOf="@+id/img_vendor_skill_back" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_gray_screen_top_corner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_vendor_skill">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_vendor_skill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/sizeFour"
+                android:scrollbars="none"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/layout_vendor_skill_list_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:layout_marginBottom="@dimen/sizeThirtyTwo"
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="fitCenter"
+            app:backgroundTint="@color/colorYellowPrimary"
+            app:borderWidth="1dp"
+            app:fabSize="auto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/colorWhiteSmoke"
+            app:srcCompat="@drawable/ic_plus"
+            app:tint="@null"
+            tools:ignore="VectorDrawableCompat" />
+
+        <View
+            android:id="@+id/view_bg_vendor_skill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/layout_bottom_sheet"
+        layout="@layout/dialog_bottom_add_skill" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

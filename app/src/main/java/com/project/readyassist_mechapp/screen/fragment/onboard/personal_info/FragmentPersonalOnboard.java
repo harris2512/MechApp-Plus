@@ -84,11 +84,11 @@ public class FragmentPersonalOnboard extends Fragment {
     private void checkInputFieldsValidation() {
 
         if (!isNameValid()) {
-            setErrorInputField("Your full name is mandatory for us.");
+            setErrorInputField(getString(R.string.err_provide_full_name));
         } else if (!isEmailValid()) {
-            setErrorInputField("Please provide valid email id.");
+            setErrorInputField(getString(R.string.err_provide_valid_email));
         } else if (!isMobileValid()) {
-            setErrorInputField("Mobile No. must be 10 digits.");
+            setErrorInputField(getString(R.string.err_mobile_no_digits));
         } else {
             tv_error_onboard_personal.setVisibility(View.INVISIBLE);
 
@@ -97,7 +97,7 @@ public class FragmentPersonalOnboard extends Fragment {
             // fragment.setArguments(b);
             FragmentTransaction ft = requireActivity().getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.frame_onboard, fragment);
-            ft.addToBackStack("b");
+            ft.addToBackStack("a");
             ft.commit();
 
         }

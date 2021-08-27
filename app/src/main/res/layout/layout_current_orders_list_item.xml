@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/sizeSixteen"
+    android:background="@drawable/bg_white_screen_corner"
+    android:elevation="@dimen/sizeTwo"
+    android:padding="@dimen/sizeEight">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_order_id_order_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/sizeFour"
+        android:singleLine="true"
+        android:text="Order ID"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreyDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_id_order_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeFour"
+        android:singleLine="true"
+        android:text="59008"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_order_id_order_list_item"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_vehicle_type_order_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sizeEight"
+        android:layout_marginEnd="@dimen/sizeEight"
+        android:background="@drawable/bg_fill_black_corner_box"
+        android:gravity="center_horizontal|center_vertical"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeFour"
+        android:singleLine="true"
+        android:text="2W"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/white"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintEnd_toStartOf="@+id/tv_km_order_list_item"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_km_order_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sizeEight"
+        android:layout_marginEnd="@dimen/sizeEight"
+        android:background="@drawable/bg_fill_grey_corner_box"
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeFour"
+        android:singleLine="true"
+        android:text="452 km"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_date_order_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeFour"
+        android:singleLine="true"
+        android:text="06 Jan 2021, 02:55 pm"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_id_order_list_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_name_order_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeFour"
+        android:text="RSA - Accelerator Cable Replacement"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_date_order_list_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_vehicle_order_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeFour"
+        android:text="Honda - Unicorn 160r"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_name_order_list_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_address_order_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:layout_marginBottom="@dimen/sizeEight"
+        android:background="@drawable/bg_fill_water_green_corner_stroke_black_box"
+        android:clickable="true"
+        android:focusable="true"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeEight"
+        android:text="@string/label_dummy_address"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_vehicle_order_list_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_action_order_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:layout_marginBottom="@dimen/sizeEight"
+        android:background="@drawable/button_bg_primary"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:padding="@dimen/sizeEight"
+        android:text="Acknowledge"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_address_order_list_item" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_popular_services_item"
+    android:layout_width="@dimen/sizeHundred"
+    android:layout_height="@dimen/sizeHundred"
+    android:layout_margin="@dimen/sizeSixteen"
+    android:background="@drawable/bg_white_screen_corner"
+    android:elevation="@dimen/sizeTwo"
+    android:padding="@dimen/sizeEight">
+
+    <ImageView
+        android:id="@+id/img_popular_services_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sizeThirty"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_service_placeholder"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_popular_services_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeEight"
+        android:text="Battery Jump Start"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/over_line_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_popular_services_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

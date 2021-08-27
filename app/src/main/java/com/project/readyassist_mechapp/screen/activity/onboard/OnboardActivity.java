@@ -1,7 +1,9 @@
 package com.project.readyassist_mechapp.screen.activity.onboard;
 
+import android.app.FragmentManager;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -21,10 +23,7 @@ import org.greenrobot.eventbus.Subscribe;
 public class OnboardActivity extends AppCompatActivity {
 
 
-    protected AnimationDrawable stepperPersonalAnim, stepperDocumentAnim, stepperVerifyingAnim,
-            stepperLinePersonal, stepperLineDocument;
-
-
+    protected String selectedFragment;
     protected ActivityOnboardBinding onboardBinding;
 
 
@@ -42,17 +41,26 @@ public class OnboardActivity extends AppCompatActivity {
     private void init() {
 
 
+        onboardBinding.tvLabelOnboard.setText(R.string.label_onboard_personal_info);
+        selectedFragment = "1";
         Fragment fragment = FragmentPersonalOnboard.newInstance();
         // fragment.setArguments(b);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frame_onboard, fragment);
-        ft.addToBackStack("a");
         ft.commit();
+
 
         sendMessageToFragment("");
 
         onboardBinding.imgOnboardBack.setOnClickListener(v -> {
-            getSupportFragmentManager().popBackStackImmediate();
+
+            FragmentManager fm = getFragmentManager();
+            if (getSupportFragmentManager().popBackStackImmediate()) {
+                fm.popBackStack();
+            } else {
+                finish();
+            }
+
         });
 
     }
@@ -68,41 +76,44 @@ public class OnboardActivity extends AppCompatActivity {
     public void getMessage(Events.FragmentActivityMessage msgFragmentToActivityEvent) {
 
         onboardBinding.tvCurrentPageOnboard.setText(msgFragmentToActivityEvent.getMessage());
-
-        switch (msgFragmentToActivityEvent.getMessage()) {
+        selectedFragment = msgFragmentToActivityEvent.getMessage();
+        switch (selectedFragment) {
 
             case "1":
-                onboardBinding.imgOnboardBack.setVisibility(View.INVISIBLE);
+                onboardBinding.linearOnboardToolbar.setVisibility(View.VISIBLE);
+                onboardBinding.tvLabelOnboard.setText(R.string.label_onboard_personal_info);
                 break;
 
             case "2":
-                onboardBinding.imgOnboardBack.setVisibility(View.VISIBLE);
-
+                onboardBinding.linearOnboardToolbar.setVisibility(View.VISIBLE);
+                onboardBinding.tvLabelOnboard.setText(R.string.label_onboard_address_info);
                 break;
 
             case "3":
-                onboardBinding.imgOnboardBack.setVisibility(View.VISIBLE);
-
+                onboardBinding.linearOnboardToolbar.setVisibility(View.VISIBLE);
+                onboardBinding.tvLabelOnboard.setText(R.string.label_onboard_profile_images_info);
                 break;
 
             case "4":
-                onboardBinding.imgOnboardBack.setVisibility(View.VISIBLE);
-
+                onboardBinding.linearOnboardToolbar.setVisibility(View.VISIBLE);
+                onboardBinding.tvLabelOnboard.setText(R.string.label_onboard_identity_info);
                 break;
 
             case "5":
-                onboardBinding.imgOnboardBack.setVisibility(View.VISIBLE);
-
+                onboardBinding.linearOnboardToolbar.setVisibility(View.VISIBLE);
+                onboardBinding.tvLabelOnboard.setText(R.string.label_onboard_gstin_info);
                 break;
 
             case "6":
-                onboardBinding.imgOnboardBack.setVisibility(View.VISIBLE);
+                onboardBinding.linearOnboardToolbar.setVisibility(View.VISIBLE);
+                onboardBinding.tvLabelOnboard.setText(R.string.label_onboard_bank_info);
+                break;
 
+            case "7":
+                onboardBinding.linearOnboardToolbar.setVisibility(View.GONE);
                 break;
 
         }
-
-
 
 
     }
@@ -134,6 +145,24 @@ public class OnboardActivity extends AppCompatActivity {
 
         // UnRegister event.
         GlobalBus.getBus().unregister(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if (!selectedFragment.isEmpty() && selectedFragment.equals("7")) {
+            finish();
+            return;
+        }
+
+        FragmentManager fm = getFragmentManager();
+        if (getSupportFragmentManager().popBackStackImmediate()) {
+            fm.popBackStack();
+        } else {
+            finish();
+            super.onBackPressed();
+        }
+
     }
 
 

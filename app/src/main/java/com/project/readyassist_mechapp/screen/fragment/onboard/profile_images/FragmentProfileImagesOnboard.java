@@ -72,7 +72,7 @@ public class FragmentProfileImagesOnboard extends Fragment {
             // fragment.setArguments(b);
             FragmentTransaction ft = requireActivity().getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.frame_onboard, fragment);
-            ft.addToBackStack("d");
+            ft.addToBackStack("c");
             ft.commit();
 
         });

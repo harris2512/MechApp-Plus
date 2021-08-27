@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/sizeSixteen"
+    android:background="@drawable/bg_white_screen_corner"
+    android:elevation="@dimen/sizeTwo"
+    android:padding="@dimen/sizeEight">
+
+    <ImageView
+        android:id="@+id/img_service_vendor_skill_item"
+        android:layout_width="@dimen/sizeTwoHundred"
+        android:layout_height="0dp"
+        android:layout_marginEnd="-32dp"
+        android:alpha="0.025"
+        android:contentDescription="@string/contentDescription"
+        android:padding="@dimen/sizeEight"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_service_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_date_vendor_skill_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/sizeTwo"
+        android:text="@string/label_created_at"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreyLight"
+        android:textSize="@dimen/over_line_regular"
+        app:layout_constraintEnd_toStartOf="@id/tv_date_vendor_skill_item"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_date_vendor_skill_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/sizeTwo"
+        android:text="22 Mar 2019"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreyDark"
+        android:textSize="@dimen/over_line_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_name_vendor_skill_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_car_front"
+        android:drawablePadding="@dimen/sizeEight"
+        android:gravity="center_vertical"
+        android:padding="@dimen/sizeEight"
+        android:text="Battery Jumb-start"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/body_regular"
+        app:layout_constraintTop_toBottomOf="@id/tv_date_vendor_skill_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_charges_vendor_skill_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingEnd="@dimen/sizeEight"
+        android:text="@string/label_charges_for_service"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_vendor_skill_item" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/sizeEight"
+        android:layout_marginEnd="@dimen/sizeSixteen"
+        android:background="@color/colorGreyDark"
+        app:layout_constraintEnd_toEndOf="@+id/tv_label_charges_vendor_skill_item"
+        app:layout_constraintStart_toStartOf="@+id/tv_label_charges_vendor_skill_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_charges_vendor_skill_item" />
+
+    <!--Day Charge-->
+    <ImageView
+        android:id="@+id/img_day_charge_vendor_skill_item"
+        android:layout_width="@dimen/sizeTwenty"
+        android:layout_height="@dimen/sizeTwenty"
+        android:layout_marginStart="@dimen/sizeEight"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_day_charge"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_day_charge_vendor_skill_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_day_charge_vendor_skill_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_day_charge_vendor_skill_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:gravity="center_vertical"
+        android:padding="@dimen/sizeEight"
+        android:text="@string/label_day"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreyDark"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintStart_toEndOf="@+id/img_day_charge_vendor_skill_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_charges_vendor_skill_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_day_charge_vendor_skill_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/sizeEight"
+        android:text="Rs. 399"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_day_charge_vendor_skill_item"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_day_charge_vendor_skill_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_day_charge_vendor_skill_item" />
+
+    <!--Night Charge-->
+
+    <ImageView
+        android:id="@+id/img_night_charge_vendor_skill_item"
+        android:layout_width="@dimen/sizeTwenty"
+        android:layout_height="@dimen/sizeTwenty"
+        android:layout_marginStart="@dimen/sizeSixteen"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_night_charge"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_night_charge_vendor_skill_item"
+        app:layout_constraintStart_toEndOf="@+id/tv_day_charge_vendor_skill_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_night_charge_vendor_skill_item" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_night_charge_vendor_skill_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:gravity="center_vertical"
+        android:padding="@dimen/sizeEight"
+        android:text="@string/label_night"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreyDark"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintStart_toEndOf="@+id/img_night_charge_vendor_skill_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_charges_vendor_skill_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_night_charge_vendor_skill_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/sizeEight"
+        android:text="Rs. 499"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_night_charge_vendor_skill_item"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_night_charge_vendor_skill_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_night_charge_vendor_skill_item" />
+
+    <!--Extra Terrain Charge-->
+    <ImageView
+        android:id="@+id/img_terrain_charge_vendor_skill_item"
+        android:layout_width="@dimen/sizeTwenty"
+        android:layout_height="@dimen/sizeTwenty"
+        android:layout_marginStart="@dimen/sizeEight"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_cash"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_terrain_charge_vendor_skill_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_terrain_charge_vendor_skill_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_terrain_charge_vendor_skill_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/sizeEight"
+        android:text="@string/label_extra_terrain_charge"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreyDark"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintStart_toEndOf="@+id/img_terrain_charge_vendor_skill_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_night_charge_vendor_skill_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_terrain_charge_vendor_skill_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/sizeTwo"
+        android:text="Rs. 4"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_terrain_charge_vendor_skill_item"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_terrain_charge_vendor_skill_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_terrain_charge_vendor_skill_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/sizeTwo"
+        android:text="@string/lable_per_km"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreyLight"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_terrain_charge_vendor_skill_item"
+        app:layout_constraintStart_toEndOf="@+id/tv_terrain_charge_vendor_skill_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_terrain_charge_vendor_skill_item" />
+
+    <!--Remove Skill-->
+    <ImageView
+        android:id="@+id/img_remove_vendor_skill_item"
+        android:layout_width="@dimen/sizeTwenty"
+        android:layout_height="@dimen/sizeTwenty"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_remove_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_remove_vendor_skill_item"
+        app:layout_constraintEnd_toStartOf="@id/tv_remove_vendor_skill_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_remove_vendor_skill_item"
+        app:tint="@color/colorGreyDark" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_remove_vendor_skill_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/sizeEight"
+        android:text="@string/label_remove"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreyDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_terrain_charge_vendor_skill_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

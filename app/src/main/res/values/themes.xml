@@ -29,9 +29,20 @@
 
     </style>
 
+    <!--Theme - StatusBar Transparent-->
+    <style name="status_bar_green" parent="Theme.MechApp">
+        <item name="android:windowBackground">@color/colorGreenPrimary</item>
+        <item name="android:textViewStyle">@style/PoppinsTextViewStyle</item>
+
+        <!--Status Bar Color-->
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorGreenPrimary
+        </item>
+
+
+    </style>
 
     <!--Font Family-->
-    <style name="RobotoTextViewStyle" parent="Widget.AppCompat.TextView">
+    <style name="PoppinsTextViewStyle" parent="Widget.AppCompat.TextView">
         <!--        <item name="android:fontFamily">@font/roboto_regular</item>-->
         <item name="android:fontFamily">@font/poppins_regular</item>
     </style>
@@ -52,6 +63,54 @@
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">5%</item>
         <item name="background">@color/colorWhiteSmoke</item>
+    </style>
+
+
+    <!--Radio Button-->
+    <style name="CustomRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textAppearance">@style/PoppinsTextViewStyle</item>
+        <item name="android:textViewStyle">@style/PoppinsTextViewStyle</item>
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">
+            @color/colorGreyDark
+        </item>
+        <item name="android:colorControlActivated" tools:targetApi="lollipop">
+            @color/black
+        </item>
+        <item name="android:colorControlHighlight" tools:targetApi="lollipop">
+            @color/black
+        </item>
+    </style>
+
+
+    <!--Bottom sheet Dialog-->
+    <style name="TransparentDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:textAppearance">@style/PoppinsTextViewStyle</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!--Custom Slider-->
+    <style name="CustomSliderYellowLight" parent="Widget.MaterialComponents.Slider">
+        <item name="android:textAppearance">@style/PoppinsTextViewStyle</item>
+        <item name="thumbStrokeColor">@color/black</item>
+        <item name="trackColor">@color/colorYellowLight</item>
+        <item name="trackColorActive">@color/colorGreenPrimary</item>
+    </style>
+
+    <!--Custom MaterialButtonToggle-->
+    <style name="MaterialToggleButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="colorPrimary">@color/colorYellowPrimary</item>
+        <item name="colorPrimaryDark">@color/colorYellowPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="android:textAppearance">@style/PoppinsTextViewStyle</item>
+
     </style>
 
 
