@@ -5,7 +5,6 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/sizeSixteen"
     android:background="@drawable/bg_white_screen_corner"
-    android:elevation="@dimen/sizeTwo"
     android:padding="@dimen/sizeEight">
 
     <com.google.android.material.textview.MaterialTextView
@@ -14,7 +13,7 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/sizeFour"
         android:singleLine="true"
-        android:text="Order ID"
+        android:text="#Order ID"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/colorGreyDark"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +56,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/sizeEight"
-        android:layout_marginEnd="@dimen/sizeEight"
         android:background="@drawable/bg_fill_grey_corner_box"
         android:gravity="center"
         android:letterSpacing="0.05"
@@ -134,7 +132,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/sizeThirtyTwo"
-        android:layout_marginBottom="@dimen/sizeEight"
         android:background="@drawable/button_bg_primary"
         android:clickable="true"
         android:focusable="true"

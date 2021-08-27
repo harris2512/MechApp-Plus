@@ -19,30 +19,31 @@
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/img_vendor_skill_back"
                 android:layout_width="@dimen/sizeFortySix"
                 android:layout_height="@dimen/sizeFortySix"
                 android:layout_margin="@dimen/sizeEight"
                 android:background="?attr/selectableItemBackground"
+                android:clickable="true"
                 android:contentDescription="@string/contentDescription"
+                android:focusable="true"
+                android:padding="@dimen/sizeEight"
                 android:src="@drawable/ic_back"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.textview.MaterialTextView
+            <com.project.readyassist_mechapp.utils.MyAppBold
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/sizeEight"
                 android:gravity="center_vertical"
                 android:letterSpacing="0.05"
                 android:text="@string/label_my_skill"
-                android:textAllCaps="true"
-                android:textAppearance="@style/MyTextAppearanceBold"
                 android:textColor="@color/black"
-                android:textSize="@dimen/headline_medium"
+                android:textSize="@dimen/headline_small"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/img_vendor_skill_back"
                 app:layout_constraintEnd_toEndOf="parent"

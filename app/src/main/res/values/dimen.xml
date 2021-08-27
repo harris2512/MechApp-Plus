@@ -9,6 +9,7 @@
     <dimen name="subtitle_medium">14sp</dimen>
     <dimen name="body_regular">16sp</dimen>
     <dimen name="subtitle_regular">16sp</dimen>
+    <dimen name="headline_small">18sp</dimen>
     <dimen name="headline_medium">20sp</dimen>
     <dimen name="headline_regular_1">24sp</dimen>
     <dimen name="headline_regular_2">34sp</dimen>
