@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--    <item>-->
+<!--        <clip android:drawable="@drawable/ic_swipe_right">-->
+
+<!--            <shape>-->
+<!--                <size-->
+<!--                    android:width="@dimen/sizeFortySix"-->
+<!--                    android:height="@dimen/sizeFortySix" />-->
+<!--                <stroke-->
+<!--                    android:width="0.5dp"-->
+<!--                    android:color="@color/colorYellowPrimary" />-->
+
+<!--                <solid android:color="@android:color/transparent" />-->
+<!--            </shape>-->
+
+<!--        </clip>-->
+<!--    </item>-->
+
+<!--</layer-list>-->
+
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <item>
+        <shape>
+            <size
+                android:width="30dp"
+                android:height="30dp" />
+
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_swipe_right" />
+
+</layer-list>

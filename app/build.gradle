@@ -15,20 +15,37 @@ android {
         versionCode 1
         versionName "1.0"
 
+      //  flavorDimensions "default"
+
+
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 
     buildTypes {
+
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+
+            signingConfig signingConfigs.debug
+
         }
-    }
+
+        debug {
+            debuggable true
+            minifyEnabled false
 
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+
+        }
+
     }
 
 
@@ -37,12 +54,10 @@ android {
         dataBinding true
         viewBinding true
     }
-    sourceSets {
-        main {
-            assets {
-                srcDirs 'src\\main\\assets'
-            }
-        }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 
@@ -70,5 +85,10 @@ dependencies {
 
     /*Event Bus*/
     implementation 'org.greenrobot:eventbus:3.0.0'
+
+    /*Retrofit*/
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+
 
 }

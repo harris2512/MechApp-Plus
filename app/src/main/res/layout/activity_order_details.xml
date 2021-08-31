@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screen.activity.OrderDetailsActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_order_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_onboard_back"
+            android:layout_width="@dimen/sizeFortySix"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_margin="@dimen/sizeEight"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
+            android:padding="@dimen/sizeEight"
+            android:src="@drawable/ic_back"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.project.readyassist_mechapp.utils.MyAppBold
+            android:id="@+id/tv_label_onboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeEight"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.05"
+            android:text="#55989"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/headline_small"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/img_onboard_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_onboard_back"
+            app:layout_constraintTop_toTopOf="@+id/img_onboard_back" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_order_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_gray_screen_top_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_order_details" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

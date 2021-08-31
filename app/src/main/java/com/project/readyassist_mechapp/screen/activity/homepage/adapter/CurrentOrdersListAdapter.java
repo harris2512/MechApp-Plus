@@ -1,6 +1,7 @@
 package com.project.readyassist_mechapp.screen.activity.homepage.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.readyassist_mechapp.R;
+import com.project.readyassist_mechapp.screen.activity.OrderDetailsActivity;
 
 
 public class CurrentOrdersListAdapter extends RecyclerView.Adapter<CurrentOrdersListAdapter.MyViewHolder> {
@@ -95,6 +97,12 @@ public class CurrentOrdersListAdapter extends RecyclerView.Adapter<CurrentOrders
             });
         }
 
+
+        holder.layout_current_orders_item.setOnClickListener(v -> {
+            context.startActivity(new Intent(context, OrderDetailsActivity.class));
+        });
+
+
     }
 
 
@@ -105,14 +113,14 @@ public class CurrentOrdersListAdapter extends RecyclerView.Adapter<CurrentOrders
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        protected ConstraintLayout layout_popular_services_item;
+        protected ConstraintLayout layout_current_orders_item;
         protected ImageView img_popular_services_item;
         protected TextView tv_popular_services_item;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-//            layout_popular_services_item = itemView.findViewById(R.id.layout_popular_services_item);
+            layout_current_orders_item = itemView.findViewById(R.id.layout_current_orders_item);
 //            img_popular_services_item = itemView.findViewById(R.id.img_popular_services_item);
 //            tv_popular_services_item = itemView.findViewById(R.id.tv_popular_services_item);
 

@@ -25,10 +25,7 @@
                 android:layout_width="@dimen/sizeFortySix"
                 android:layout_height="@dimen/sizeFortySix"
                 android:layout_margin="@dimen/sizeEight"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
                 android:contentDescription="@string/contentDescription"
-                android:focusable="true"
                 android:padding="@dimen/sizeEight"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -57,8 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
-            android:paddingStart="@dimen/sizeSixteen"
-            android:paddingEnd="@dimen/sizeSixteen"
+            android:paddingStart="@dimen/sizeEighteen"
+            android:paddingEnd="@dimen/sizeEighteen"
             android:paddingBottom="@dimen/sizeThirtyTwo"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/toolbar_home">
@@ -66,8 +63,8 @@
             <!--My Account-->
             <ImageView
                 android:id="@+id/img_nav_home_account"
-                android:layout_width="@dimen/sizeTwentySix"
-                android:layout_height="@dimen/sizeTwentySix"
+                android:layout_width="@dimen/sizeTwenty"
+                android:layout_height="@dimen/sizeTwenty"
                 android:contentDescription="@string/contentDescription"
                 android:src="@drawable/ic_account"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_account_nav_home"
@@ -94,8 +91,8 @@
             <!--My History-->
             <ImageView
                 android:id="@+id/img_history_nav_home"
-                android:layout_width="@dimen/sizeTwentySix"
-                android:layout_height="@dimen/sizeTwentySix"
+                android:layout_width="@dimen/sizeTwenty"
+                android:layout_height="@dimen/sizeTwenty"
                 android:contentDescription="@string/contentDescription"
                 android:src="@drawable/ic_history"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_history_nav_home"
@@ -122,8 +119,8 @@
             <!--My Earning-->
             <ImageView
                 android:id="@+id/img_earning_nav_home"
-                android:layout_width="@dimen/sizeTwentySix"
-                android:layout_height="@dimen/sizeTwentySix"
+                android:layout_width="@dimen/sizeTwenty"
+                android:layout_height="@dimen/sizeTwenty"
                 android:contentDescription="@string/contentDescription"
                 android:src="@drawable/ic_earning"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_earning_nav_home"
@@ -150,8 +147,8 @@
             <!--Logout-->
             <ImageView
                 android:id="@+id/img_logout_nav_home"
-                android:layout_width="@dimen/sizeTwentySix"
-                android:layout_height="@dimen/sizeTwentySix"
+                android:layout_width="@dimen/sizeTwenty"
+                android:layout_height="@dimen/sizeTwenty"
                 android:contentDescription="@string/contentDescription"
                 android:src="@drawable/ic_logout"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_logout_nav_home"

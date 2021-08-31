@@ -2,6 +2,7 @@ package com.project.readyassist_mechapp.screen.activity.homepage;
 
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AbsListView;
 
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.databinding.ActivityHomePageBinding;
 import com.project.readyassist_mechapp.screen.activity.homepage.adapter.CurrentOrdersListAdapter;
+import com.project.readyassist_mechapp.utils.RAUtils;
 
 import java.util.ResourceBundle;
 
@@ -47,6 +49,15 @@ public class HomePage extends AppCompatActivity {
         linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,
                 false);
 
+        showPb();
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dismissPb();
+            }
+        }, 2000);
+
         setCurrentOrderListAdapter();
 
         homePageBinding.imgHomeBack.setOnClickListener(v -> {
@@ -71,6 +82,14 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void dismissPb() {
+        RAUtils.dismissProgressDialog();
+    }
+
+    private void showPb() {
+        RAUtils.showProgressDialog(this, true);
     }
 
     private void setAnimNav() {

@@ -1,4 +1,25 @@
 package com.project.readyassist_mechapp.applications;
 
-public class MyApplication {
+import android.app.Application;
+
+public class MyApplication extends Application {
+
+    private static MyApplication mInstance;
+
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        /*Initialize the Instance*/
+        mInstance = this;
+
+
+    }
+
+
+    public static synchronized MyApplication getInstance() {
+        return mInstance;
+    }
+
 }

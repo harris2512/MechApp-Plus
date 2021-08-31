@@ -71,8 +71,15 @@ public class SignInActivity extends AppCompatActivity {
 
 
         signInBinding.imgSigninBanner.setOnClickListener(v -> {
+            startActivity(new Intent(this, OnboardActivity.class));
+        });
+
+        signInBinding.tvSigninLabel.setOnClickListener(v -> {
             startActivity(new Intent(this, VendorSkillActivity.class));
         });
+
+
+
 
     }
 
