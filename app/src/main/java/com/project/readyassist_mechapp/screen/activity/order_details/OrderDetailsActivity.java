@@ -1,4 +1,4 @@
-package com.project.readyassist_mechapp.screen.activity;
+package com.project.readyassist_mechapp.screen.activity.order_details;
 
 import android.os.Bundle;
 

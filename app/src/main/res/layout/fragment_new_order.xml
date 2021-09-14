@@ -17,10 +17,6 @@
             android:id="@+id/tv_order_details_order_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/sizeEight"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
             android:letterSpacing="0.05"
             android:padding="@dimen/sizeEight"
             android:text="New Order"
@@ -66,7 +62,6 @@
             android:text="0hr 3m"
             android:textAppearance="@style/MyTextAppearance"
             android:textColor="@color/white"
-            android:textSize="@dimen/body_regular"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_order_details_order_state" />
 
@@ -138,7 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/sizeSixteen"
+            android:layout_marginTop="@dimen/sizeThirtyTwo"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
@@ -169,17 +164,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_order_details_service_name" />
 
+        <!--Customer Contact Details-->
         <LinearLayout
             android:id="@+id/linear_order_details_customer_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/sizeEight"
-            android:layout_marginTop="@dimen/sizeSixteen"
+            android:layout_marginTop="@dimen/sizeThirtyTwo"
             android:layout_marginEnd="@dimen/sizeEight"
             android:background="@drawable/bg_edt_fill_grey_round_corner_black_stroke"
             android:clickable="true"
             android:focusable="true"
             android:orientation="horizontal"
+            android:visibility="gone"
             android:weightSum="2"
             app:layout_constraintTop_toBottomOf="@+id/tv_order_details_service_desc">
 
@@ -208,37 +205,48 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/img_order_details_order_pick_location"
-            android:layout_width="@dimen/sizeThirtySix"
-            android:layout_height="@dimen/sizeThirtySix"
-            android:layout_marginStart="@dimen/sizeEight"
-            android:layout_marginTop="@dimen/sizeSixteen"
-            android:layout_marginEnd="@dimen/sizeEight"
-            android:contentDescription="@string/contentDescription"
-            android:padding="@dimen/sizeSix"
-            android:src="@drawable/ic_pinned_location"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear_order_details_customer_details" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_order_details_order_pick_location"
-            android:layout_width="0dp"
+        <!--Order Pick Location-->
+        <LinearLayout
+            android:id="@+id/linear_order_details_pick_location"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:letterSpacing="0.05"
-            android:maxLines="4"
-            android:paddingStart="@dimen/sizeEight"
-            android:paddingEnd="@dimen/sizeEight"
-            android:text="@string/label_dummy_address"
-            android:textAppearance="@style/MyTextAppearance"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/img_order_details_order_pick_location"
-            app:layout_constraintTop_toTopOf="@+id/img_order_details_order_pick_location" />
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/linear_order_details_customer_details">
+
+            <ImageView
+                android:id="@+id/img_order_details_order_pick_location"
+                android:layout_width="@dimen/sizeThirty"
+                android:layout_height="@dimen/sizeThirty"
+                android:layout_marginStart="@dimen/sizeEight"
+                android:layout_marginEnd="@dimen/sizeEight"
+                android:contentDescription="@string/contentDescription"
+                android:padding="@dimen/sizeSix"
+                android:src="@drawable/ic_pinned_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_order_details_order_pick_location" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_order_details_order_pick_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:letterSpacing="0.05"
+                android:maxLines="4"
+                android:paddingStart="@dimen/sizeEight"
+                android:paddingEnd="@dimen/sizeEight"
+                android:text="@string/label_dummy_address"
+                android:textAppearance="@style/MyTextAppearance"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_order_details_order_pick_location" />
+
+        </LinearLayout>
+
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_order_details_order_pick_km"
@@ -259,6 +267,7 @@
             android:textAppearance="@style/MyTextAppearance"
             android:textColor="@color/black"
             android:textSize="@dimen/body_regular"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/img_order_details_pick_nav_map"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/img_order_details_pick_nav_map" />
@@ -281,17 +290,18 @@
             android:textAppearance="@style/MyTextAppearance"
             android:textColor="@color/black"
             android:textSize="@dimen/body_regular"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/img_order_details_pick_nav_map"
             app:layout_constraintStart_toEndOf="@+id/tv_order_details_order_pick_km"
             app:layout_constraintTop_toTopOf="@+id/img_order_details_pick_nav_map" />
 
         <ImageView
             android:id="@+id/img_order_details_pick_nav_map"
-            android:layout_width="@dimen/sizeFortySix"
-            android:layout_height="@dimen/sizeFortySix"
+            android:layout_width="@dimen/sizeForty"
+            android:layout_height="@dimen/sizeForty"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="@dimen/sizeEight"
-            android:layout_marginTop="@dimen/sizeSixteen"
+            android:layout_marginTop="@dimen/sizeThirtyTwo"
             android:layout_marginEnd="@dimen/sizeEight"
             android:background="@drawable/ic_oval_green"
             android:clickable="true"
@@ -299,8 +309,9 @@
             android:focusable="true"
             android:padding="@dimen/sizeSix"
             android:src="@drawable/ic_map_navigation"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_order_details_order_pick_location"
+            app:layout_constraintTop_toBottomOf="@+id/linear_order_details_pick_location"
             app:tint="@color/white" />
 
         <androidx.appcompat.widget.AppCompatSeekBar
@@ -317,6 +328,7 @@
             tools:targetApi="lollipop" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_new_order_swipe"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"

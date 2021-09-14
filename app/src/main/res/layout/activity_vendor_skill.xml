@@ -100,8 +100,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <include
-        android:id="@+id/layout_bottom_sheet"
-        layout="@layout/dialog_bottom_add_skill" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

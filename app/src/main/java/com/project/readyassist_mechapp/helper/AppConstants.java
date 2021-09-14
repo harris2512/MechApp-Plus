@@ -1,0 +1,39 @@
+package com.project.readyassist_mechapp.helper;
+
+public class AppConstants {
+
+    public static final String[] arrayPopularServices = {
+            "Battery Jumpstart",
+            "Flat Tyre (Tube)",
+            "Flat Tyre (Tubeless)",
+            "Key Unlock Assistance",
+            "Minor Repair",
+            "Fuel Delivery",
+            "Flatbed Towing",
+            "Lift Towing",
+            "Battery Recharge Addon",
+            "Accelerator Cable Replacement",
+            "Miscellaneous",
+            "Valve pin change",
+    };
+
+    public static final String stateNewOrder = "New Order";
+    public static final String stateAcknowledged = "Acknowledged";
+    public static final String stateOnTheWay = "On The Way";
+    public static final String stateLocationReached = "Location Reached";
+    public static final String stateWorkInProgress = "Work In-Progress";
+    public static final String stateSuccess = "Success";
+    public static final String stateFailed = "Failed";
+
+
+    public static final String swipeAcknowledge = "Acknowledge";
+    public static final String swipeStartVisit = "Start Visit";
+    public static final String swipeLocationReached = "Location Reached";
+    public static final String swipeStartWork = "Start Work";
+    public static final String swipeCompleted = "Completed";
+    public static final String swipeSuccessful = "Successful";
+    public static final String swipeFailed = "Failed";
+    public static final String swipeCloseOrder = "Close Order";
+
+
+}

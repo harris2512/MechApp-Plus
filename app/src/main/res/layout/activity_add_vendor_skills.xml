@@ -5,17 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".screen.activity.order_details.OrderDetailsActivity">
+    tools:context=".screen.activity.add_vendor_skills.AddVendorSkills">
 
+    <!--Toolbar-->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/toolbar_order_details"
+        android:id="@+id/toolbar_vendor_add_skill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/img_onboard_back"
+            android:id="@+id/img_vendor_add_skill_back"
             android:layout_width="@dimen/sizeFortySix"
             android:layout_height="@dimen/sizeFortySix"
             android:layout_margin="@dimen/sizeEight"
@@ -31,30 +33,31 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.project.readyassist_mechapp.utils.MyAppBold
-            android:id="@+id/tv_label_onboard"
+            android:id="@+id/tv_add_vendor_skill_header"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/sizeEight"
             android:gravity="center_vertical"
             android:letterSpacing="0.05"
-            android:text="#55989"
-            android:textAllCaps="true"
+            android:text="@string/label_my_skill"
             android:textColor="@color/black"
-            android:textSize="@dimen/body_regular"
+            android:textSize="@dimen/headline_small"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/img_onboard_back"
+            app:layout_constraintBottom_toBottomOf="@+id/img_vendor_add_skill_back"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/img_onboard_back"
-            app:layout_constraintTop_toTopOf="@+id/img_onboard_back" />
+            app:layout_constraintStart_toEndOf="@id/img_vendor_add_skill_back"
+            app:layout_constraintTop_toTopOf="@+id/img_vendor_add_skill_back" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!--Frame Of Add Skill's-->
     <FrameLayout
-        android:id="@+id/frame_order_details"
+        android:id="@+id/frame_add_skill"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/bg_gray_screen_top_corner"
+        android:paddingTop="@dimen/sizeSixteen"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_order_details" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar_vendor_add_skill" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

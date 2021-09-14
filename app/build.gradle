@@ -7,7 +7,6 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
-
     defaultConfig {
         applicationId "com.project.readyassist_mechapp"
         minSdkVersion 19
@@ -15,7 +14,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-      //  flavorDimensions "default"
+        flavorDimensions "default"
 
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -36,12 +35,26 @@ android {
 
             signingConfig signingConfigs.debug
 
+            manifestPlaceholders = [appName: "MechApp", mapKey: "AIzaSyCr17JyBUkudCa6BTxniFNWPeADAGPXcIo"]
+            buildConfigField("String", "BASE_URL", "\"http://app.readyassist.net/\"")
+            buildConfigField("String", "GApiKey", "\"AIzaSyCr17JyBUkudCa6BTxniFNWPeADAGPXcIo\"")
+            buildConfigField("String", "ExoApiKey", "\"faf59b9b634bd10c49bd799b216f7ebb65afd8b7d4cbb6de\"")
+            buildConfigField("String", "ExoApiToken", "\"6e7b9a2f55616d841ab6d980e127d7b5d334280f219bf71b\"")
+            buildConfigField("String", "ExoSid", "\"readyassist\"")
+
         }
 
         debug {
             debuggable true
             minifyEnabled false
 
+            manifestPlaceholders = [appName: "MechDev", mapKey: "AIzaSyC0KYKIjJ4jlHK7Vyo-yYSdffnvvx05vw4"]
+            buildConfigField("String", "BASE_URL", "\"http://dev.readyassist.net/\"")
+//            buildConfigField("String", "BASE_URL", "\"http://13.232.143.83/\"")
+            buildConfigField("String", "GApiKey", "\"AIzaSyC0KYKIjJ4jlHK7Vyo-yYSdffnvvx05vw4\"")
+            buildConfigField("String", "ExoApiKey", "\"d47fac7c7b832c393e5b4095a8f06d6e40e3e2efb7298df1\"")
+            buildConfigField("String", "ExoApiToken", "\"99d356b2b70137bcecd98dab586b2e0b8185f8caffe911e3\"")
+            buildConfigField("String", "ExoSid", "\"readyassist\"")
 
 
         }
@@ -58,6 +71,19 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    productFlavors {
+
+        productions {
+            applicationId "com.prod.readyassist_mechapp"
+        }
+
+        development {
+            applicationId "com.dev.readyassist_mechapp"
+        }
+
     }
 
 

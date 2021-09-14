@@ -41,7 +41,7 @@
         android:gravity="center"
         android:letterSpacing="0.1"
         android:padding="@dimen/sizeSixteen"
-        android:text="Ok, Understood"
+        android:text="Add Skill now"
         android:textAllCaps="true"
         android:textAppearance="@style/MyTextAppearanceBold"
         android:textColor="@color/white"

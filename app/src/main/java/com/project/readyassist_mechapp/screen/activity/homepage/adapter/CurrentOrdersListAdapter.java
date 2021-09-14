@@ -13,7 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.readyassist_mechapp.R;
-import com.project.readyassist_mechapp.screen.activity.OrderDetailsActivity;
+import com.project.readyassist_mechapp.screen.activity.order_details.OrderDetailsActivity;
 
 
 public class CurrentOrdersListAdapter extends RecyclerView.Adapter<CurrentOrdersListAdapter.MyViewHolder> {

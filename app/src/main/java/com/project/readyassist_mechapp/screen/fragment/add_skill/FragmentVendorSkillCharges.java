@@ -1,12 +1,9 @@
-package com.project.readyassist_mechapp.screen.fragment.onboard.verifying;
+package com.project.readyassist_mechapp.screen.fragment.add_skill;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,24 +13,21 @@ import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.helper.SessionManager;
 import com.project.readyassist_mechapp.helper.events.Events;
 import com.project.readyassist_mechapp.helper.events.GlobalBus;
-import com.project.readyassist_mechapp.screen.activity.vendor_skill.VendorSkillActivity;
 
 import org.greenrobot.eventbus.Subscribe;
 
-public class FragmentOnboardVerifying extends Fragment implements View.OnClickListener {
+
+public class FragmentVendorSkillCharges extends Fragment {
 
 
     protected View view;
     protected Fragment selectedFragment;
     protected SessionManager sessionManager;
 
-    protected TextView btn_onboard_verifying_submit;
 
-
-    public static FragmentOnboardVerifying newInstance() {
-        return new FragmentOnboardVerifying();
+    public static FragmentVendorSkillCharges newInstance() {
+        return new FragmentVendorSkillCharges();
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,12 +38,13 @@ public class FragmentOnboardVerifying extends Fragment implements View.OnClickLi
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_onboard_verifying, container, false);
+        view = inflater.inflate(R.layout.fragment_vendor_skill_charges, container, false);
 
-        // sessionManager = new SessionManager(getActivity());
+//         sessionManager = new SessionManager(getActivity());
 
         // register the event to listen.
         GlobalBus.getBus().register(this);
+
 
         init();
 
@@ -58,31 +53,7 @@ public class FragmentOnboardVerifying extends Fragment implements View.OnClickLi
 
     private void init() {
 
-        initializeVariable();
 
-        sendMessageToActivity("7");
-
-        btn_onboard_verifying_submit.setOnClickListener(this);
-    }
-
-    private void initializeVariable() {
-        btn_onboard_verifying_submit = view.findViewById(R.id.btn_onboard_verifying_submit);
-    }
-
-
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-
-            case R.id.btn_onboard_verifying_submit:
-
-                startActivity(new Intent(requireActivity(), VendorSkillActivity.class));
-                requireActivity().finish();
-
-                break;
-
-        }
     }
 
 
@@ -102,11 +73,7 @@ public class FragmentOnboardVerifying extends Fragment implements View.OnClickLi
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-
-        // unregister the registered event.
         GlobalBus.getBus().unregister(this);
-
     }
-
 
 }

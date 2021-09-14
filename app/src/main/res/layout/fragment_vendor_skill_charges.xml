@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhiteSmoke">
+
+    <!--Vehicle Type Choose-->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggle_skill_vehicle_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:paddingStart="@dimen/sizeSixteen"
+        android:paddingEnd="@dimen/sizeSixteen"
+        android:weightSum="3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/radio_vehicle_car"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:paddingTop="@dimen/sizeSixteen"
+            android:paddingBottom="@dimen/sizeSixteen"
+            android:text="Car"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:theme="@style/MaterialToggleButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/radio_vehicle_bike"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:paddingTop="@dimen/sizeSixteen"
+            android:paddingBottom="@dimen/sizeSixteen"
+            android:text="Bike"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:theme="@style/MaterialToggleButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/radio_vehicle_all"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:paddingTop="@dimen/sizeSixteen"
+            android:paddingBottom="@dimen/sizeSixteen"
+            android:text="All"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:theme="@style/MaterialToggleButton" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <!--Charges-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_charges_bottom_add_skill"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="@dimen/sizeSixteen"
+        android:paddingBottom="@dimen/sizeSixteen"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tv_bottom_add_skill_submit"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_skill_vehicle_type">
+
+        <!-- For Service Charge -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_service_charge_add_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sizeSixteen"
+            android:text="Choose Service Charge"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_min_price_service_add_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:text="Rs. 199"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textSize="@dimen/over_line_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_service_charge_add_skill" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_service_price_add_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:text="Rs. 499"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/colorGreenPrimaryDark"
+            android:textSize="@dimen/over_line_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_service_charge_add_skill" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_max_price_service_add_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:text="Rs. 499"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textSize="@dimen/over_line_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_service_charge_add_skill" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_service_charge_add_skill"
+            style="@style/CustomSliderYellowLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:stepSize="1.0"
+            android:valueFrom="199"
+            android:valueTo="499"
+            app:layout_constraintTop_toBottomOf="@+id/tv_min_price_service_add_skill"
+            app:trackHeight="@dimen/sizeEight" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_service_charge_desc_add_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:text="Charges will be added extra Rs. 100 for Night."
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/over_line_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_service_charge_add_skill" />
+
+        <!-- For Extra Terrain Charge -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_service_terrain_charge_add_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeThirtyTwo"
+            android:padding="@dimen/sizeSixteen"
+            android:text="Choose Extra Terrain Charge"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_service_charge_desc_add_skill" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_min_price_terrain_add_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:text="Rs. 1"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textSize="@dimen/over_line_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_service_terrain_charge_add_skill" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_terrain_price_add_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:text="Rs. 1"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/colorGreenPrimaryDark"
+            android:textSize="@dimen/over_line_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_service_terrain_charge_add_skill" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_max_price_terrain_add_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:text="Rs. 10"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textSize="@dimen/over_line_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_service_terrain_charge_add_skill" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_terrain_charge_add_skill"
+            style="@style/CustomSliderYellowLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:stepSize="1.0"
+            android:valueFrom="1"
+            android:valueTo="10"
+            app:layout_constraintTop_toBottomOf="@+id/tv_min_price_terrain_add_skill"
+            app:trackHeight="@dimen/sizeEight" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_terrain_charge_desc_add_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:text="Charges for Per Kilometer."
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/over_line_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_terrain_charge_add_skill" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--Submit-->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_bottom_add_skill_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:background="@drawable/bg_fill_primary_box"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:padding="@dimen/sizeSixteen"
+        android:text="@string/label_submit"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/body_regular"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

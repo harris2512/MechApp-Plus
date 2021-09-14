@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FF000000"
+    tools:context=".screen.activity.DummyActivity">
+
+    <com.project.readyassist_mechapp.helper.SlideToUnlock
+        android:id="@+id/slideToUnlock"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true" />
+
+    <com.project.readyassist_mechapp.helper.SlideToUnlock
+        android:id="@+id/slideToUnlock2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/slideToUnlock"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        app:cancelOnYExit="true"
+        app:slideToUnlockBackgroundColor="#808080"
+        app:slideToUnlockText="Acknowledge"
+        app:slideToUnlockTextColor="#03A9F4"
+        app:sliderColor="#AAFFE97F" />
+
+</RelativeLayout>
