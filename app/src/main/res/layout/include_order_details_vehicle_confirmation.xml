@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_order_details_vehicle_confirmation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhiteSmoke"
+    android:orientation="vertical"
+    android:padding="@dimen/sizeSixteen">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_order_vehicle_confirmation_vehicle_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_order_vehicle_confirmation_vehicle_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.99"
+            android:text="ka02hn9686"
+            android:textAllCaps="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black" />
+
+
+        <ImageView
+            android:id="@+id/img_vehicle_no_like"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeThirty"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:background="@drawable/ic_oval_grey"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/sizeFour"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_close_round" />
+
+        <ImageView
+            android:id="@+id/img_vehicle_no_dislike"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeThirty"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:background="@drawable/ic_oval_grey"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/sizeFour"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_close_round" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!--    Vehicle Type Confirm    -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_order_vehicle_confirmation_vehicle_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/linear_order_vehicle_confirmation_vehicle_no">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_order_verify_vehicle_model"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.99"
+            android:text="Yamaha Fazer v1"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/img_vehicle_name_like"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeThirty"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:background="@drawable/ic_oval_grey"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/sizeFour"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_close_round" />
+
+        <ImageView
+            android:id="@+id/img_vehicle_name_dislike"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeThirty"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:background="@drawable/ic_oval_grey"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/sizeFour"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_close_round" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!--    Vehicle Odometer    -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_order_vehicle_odometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_weight="0.6"
+        android:background="@color/colorWhiteSmoke"
+        android:gravity="start"
+        android:hint="Odameter i.e 27500"
+        android:inputType="number"
+        android:padding="@dimen/sizeTwo"
+        android:paddingTop="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeEight"
+        android:singleLine="true"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/linear_order_vehicle_confirmation_vehicle_model" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_order_vehicle_confirmation_pre_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:text="Pre - Order Image Upload (Mandatory)"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/edt_order_vehicle_odometer" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/sizeSixteen"
+        android:paddingBottom="@dimen/sizeSixteen"
+        android:weightSum="4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_order_vehicle_confirmation_pre_image">
+
+        <ImageView
+            android:id="@+id/img_upload_one"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_add_image" />
+
+        <ImageView
+            android:id="@+id/img_upload_second"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_add_image" />
+
+        <ImageView
+            android:id="@+id/img_upload_three"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_add_image" />
+
+        <ImageView
+            android:id="@+id/img_upload_four"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_add_image" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
