@@ -113,5 +113,11 @@
 
     </style>
 
+    <!--Custom Spinner-->
+    <style name="CustomSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:textAppearance">@style/PoppinsTextViewStyle</item>
+        <item name="android:textViewStyle">@style/PoppinsTextViewStyle</item>
+    </style>
+
 
 </resources>

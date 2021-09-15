@@ -82,8 +82,8 @@ public class PopularServicesAdapter extends RecyclerView.Adapter<PopularServices
         mPosition = holder.getAdapterPosition();
 
         Random rnd = new Random();
-        int currentColor = Color.argb(20, rnd.nextInt(256), rnd.nextInt(256),
-                rnd.nextInt(155));
+        int currentColor = Color.argb(55, rnd.nextInt(270), rnd.nextInt(276),
+                rnd.nextInt(175));
         holder.layout_popular_services_item.setBackgroundColor(currentColor);
 
 

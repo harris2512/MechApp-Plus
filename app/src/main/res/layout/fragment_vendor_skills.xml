@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_vendor_add_skill"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhiteSmoke">
@@ -37,5 +38,24 @@
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_search_add_skill" />
+
+    <!--Next-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add_skill_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:background="@drawable/bg_fill_primary_box"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:padding="@dimen/sizeSixteen"
+        android:text="@string/label_next"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/body_regular"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

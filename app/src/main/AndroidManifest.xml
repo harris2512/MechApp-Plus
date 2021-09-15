@@ -46,6 +46,12 @@
 
         <activity android:name=".screen.activity.splash.SplashScreenActivity">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
 
         <activity
@@ -60,11 +66,6 @@
             android:theme="@style/status_bar_transparent"
             android:windowSoftInputMode="adjustPan">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
 

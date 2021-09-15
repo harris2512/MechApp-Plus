@@ -1,20 +1,27 @@
 package com.project.readyassist_mechapp.screen.fragment.add_skill;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.transition.Slide;
+import androidx.transition.Transition;
+import androidx.transition.TransitionManager;
 
 import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.helper.AppConstants;
@@ -33,7 +40,8 @@ public class FragmentVendorSkills extends Fragment {
     protected Fragment selectedFragment;
     protected SessionManager sessionManager;
 
-
+    protected ConstraintLayout layout_vendor_add_skill;
+    protected Button btn_add_skill_next;
     protected AutoCompleteTextView edt_search_add_skill;
     protected RecyclerView recycler_popular_services;
     protected PopularServicesAdapter servicesAdapter;
@@ -71,13 +79,23 @@ public class FragmentVendorSkills extends Fragment {
 
         sendMessageToActivity("Add Skill");
 
+        btn_add_skill_next.setOnClickListener(v -> {
+            Fragment fragment = FragmentVendorSkillCharges.newInstance();
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frame_add_skill, fragment);
+            ft.addToBackStack(null);
+            ft.commit();
+
+        });
 
     }
 
     private void initializeVariable() {
 
+        layout_vendor_add_skill = view.findViewById(R.id.layout_vendor_add_skill);
         edt_search_add_skill = view.findViewById(R.id.edt_search_add_skill);
         recycler_popular_services = view.findViewById(R.id.recycler_popular_services);
+        btn_add_skill_next = view.findViewById(R.id.btn_add_skill_next);
 
         recycler_popular_services.setLayoutManager(new GridLayoutManager(getContext(), 2));
         setPopularServiceAdapter();
@@ -111,14 +129,14 @@ public class FragmentVendorSkills extends Fragment {
 
                 sendMessageToActivity(AppConstants.arrayPopularServices[position]);
 
-                Fragment fragment = FragmentVendorSkillCharges.newInstance();
-                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.frame_add_skill, fragment);
-                ft.addToBackStack(null);
-                ft.commit();
+                Transition transition = new Slide(Gravity.BOTTOM);
+                transition.setDuration(500);
+                transition.addTarget(btn_add_skill_next);
+                TransitionManager.beginDelayedTransition(layout_vendor_add_skill, transition);
+                btn_add_skill_next.setVisibility(position >= 0 ? View.VISIBLE : View.GONE);
 
 
-                servicesAdapter.notifyDataSetChanged();
+                //  servicesAdapter.notifyDataSetChanged();
             }
 
             @Override

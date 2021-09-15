@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_order_details_payment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhiteSmoke"
+    android:orientation="vertical"
+    android:padding="@dimen/sizeSixteen">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_order_details_payment_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <!--AMOUNT-->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_order_details_payment_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:letterSpacing="0.05"
+        android:singleLine="true"
+        android:text="Amount"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_details_payment_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:letterSpacing="0.05"
+        android:singleLine="true"
+        android:text="Rs. 699.0"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--PAID-->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_order_details_payment_paid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:letterSpacing="0.05"
+        android:singleLine="true"
+        android:text="Paid"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreenPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_amount" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_details_payment_paid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:letterSpacing="0.05"
+        android:singleLine="true"
+        android:text="Rs. 599.0"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/colorGreenPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_amount" />
+
+    <!--DUE-->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_order_details_payment_due"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:letterSpacing="0.05"
+        android:singleLine="true"
+        android:text="Due"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorRedPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_paid" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_details_payment_due"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:letterSpacing="0.05"
+        android:singleLine="true"
+        android:text="Rs. 100.0"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/colorRedPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_paid" />
+
+    <!--Payment Type-->
+    <com.project.readyassist_mechapp.helper.CustomSpinner
+        android:id="@+id/spinner_order_details_payment_type"
+        style="@style/CustomSpinner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sizeFortySix"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:layout_marginEnd="@dimen/sizeEight"
+        android:background="@drawable/bg_edt_fill_grey_round_corner_black_stroke"
+        android:dropDownWidth="wrap_content"
+        android:dropDownHeight="wrap_content"
+        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+        android:popupBackground="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_order_details_payment_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_due" />
+
+    <!--Payment Amount-->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_order_details_payment_amount"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sizeFortySix"
+        android:layout_marginStart="@dimen/sizeEight"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:background="@drawable/bg_fill_gray_editext"
+        android:gravity="center_vertical"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeTwelve"
+        android:singleLine="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
+        app:hintTextColor="@color/colorGreyDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_order_details_payment_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_due" />
+
+    <!--Payment Transaction Ref. No-->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_order_details_payment_ref_no"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sizeFortySix"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:background="@drawable/bg_fill_gray_editext"
+        android:gravity="center_vertical"
+        android:hint="Enter Transaction Ref. No."
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeTwelve"
+        android:singleLine="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
+        app:hintTextColor="@color/colorGreyDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_order_details_payment_amount" />
+
+    <!--Payment Submit-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_order_details_payment_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:background="@drawable/button_bg_primary"
+        android:letterSpacing="0.1"
+        android:text="@string/label_submit"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/edt_order_details_payment_ref_no" />
+
+    <!--Invoice Details-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_order_details_payment_invoice_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:background="@drawable/bg_edt_fill_grey_round_corner_black_stroke"
+        android:padding="@dimen/sizeEight"
+        app:layout_constraintTop_toBottomOf="@+id/btn_order_details_payment_submit">
+
+        <!--Invoice Id-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_order_details_payment_invoice_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="Invoice Id"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_order_details_payment_invoice_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeFour"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="1885"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/caption_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_order_details_payment_invoice_id" />
+
+        <!--Date-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_order_details_payment_invoice_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="Invoice Date"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/tv_label_order_details_payment_invoice_ref_no"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_order_details_payment_invoice_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeFour"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="27 Apr 2021, 11:55 AM"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/caption_regular"
+            app:layout_constraintStart_toStartOf="@id/tv_label_order_details_payment_invoice_ref_no"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_order_details_payment_invoice_date" />
+
+        <!--Amount-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_order_details_payment_invoice_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="Amount"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_invoice_id" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_order_details_payment_invoice_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeFour"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="Rs. 699"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/caption_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_order_details_payment_invoice_amount" />
+
+        <!--Status-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_order_details_payment_invoice_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="Status"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/tv_label_order_details_payment_invoice_ref_no"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_invoice_date" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_order_details_payment_invoice_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeFour"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="Paid"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/caption_regular"
+            app:layout_constraintStart_toStartOf="@id/tv_label_order_details_payment_invoice_ref_no"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_order_details_payment_invoice_status" />
+
+        <!--Method-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_order_details_payment_invoice_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="Method"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_invoice_amount" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_order_details_payment_invoice_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeFour"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="PhonePe"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/caption_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_order_details_payment_invoice_method" />
+
+        <!--Transaction Ref. No-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_order_details_payment_invoice_ref_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="Transaction Ref. No."
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_invoice_status" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_order_details_payment_invoice_ref_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeFour"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="00234534341100999"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/caption_regular"
+            app:layout_constraintStart_toStartOf="@id/tv_label_order_details_payment_invoice_ref_no"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_order_details_payment_invoice_ref_no" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

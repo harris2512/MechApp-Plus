@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_order_details_order_completed"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhiteSmoke"
+    android:orientation="vertical"
+    android:padding="@dimen/sizeSixteen">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_details_order_duration_timer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edt_fill_grey_round_corner_black_stroke"
+        android:drawableStart="@drawable/ic_timer"
+        android:drawablePadding="@dimen/sizeSixteen"
+        android:drawableTint="@color/colorRedPrimary"
+        android:gravity="center_vertical|center"
+        android:letterSpacing="0.1"
+        android:padding="@dimen/sizeEight"
+        android:text="19:45"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/colorRedPrimary"
+        android:textSize="@dimen/headline_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="m" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_order_details_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sizeForty"
+        android:background="@drawable/button_bg_secondary"
+        android:letterSpacing="0.1"
+        android:paddingStart="@dimen/sizeThirtyTwo"
+        android:paddingEnd="@dimen/sizeThirtyTwo"
+        android:text="Failed"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_order_details_order_duration_timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_order_details_order_duration_timer" />
+
+    <!--Towing Drop Location-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_order_details_order_completed_drop_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_details_order_duration_timer">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:letterSpacing="0.05"
+            android:text="Drop Location"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeEight"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="@dimen/sizeThirty"
+                android:layout_height="@dimen/sizeThirty"
+                android:contentDescription="@string/contentDescription"
+                android:padding="@dimen/sizeSix"
+                android:src="@drawable/ic_pinned_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_order_details_order_pick_location" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_order_details_order_completed_drop_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1.99"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:letterSpacing="0.05"
+                android:maxLines="4"
+                android:paddingStart="@dimen/sizeEight"
+                android:paddingEnd="@dimen/sizeEight"
+                android:text="@string/label_dummy_address"
+                android:textAppearance="@style/MyTextAppearance"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_order_details_order_pick_location" />
+
+
+            <ImageView
+                android:id="@+id/img_order_details_pick_nav_map"
+                android:layout_width="@dimen/sizeForty"
+                android:layout_height="@dimen/sizeForty"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_oval_green"
+                android:clickable="true"
+                android:contentDescription="@string/contentDescription"
+                android:focusable="true"
+                android:padding="@dimen/sizeSix"
+                android:src="@drawable/ic_map_navigation"
+                android:visibility="visible"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_order_completed_post_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:singleLine="true"
+        android:text="Post - Order Image Upload (Mandatory)"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/linear_order_details_order_completed_drop_location" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_order_completed_pre_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/sizeSixteen"
+        android:paddingBottom="@dimen/sizeSixteen"
+        android:weightSum="4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_order_completed_post_image">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_post_upload_one"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
+            android:src="@drawable/ic_add_image" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_post_upload_second"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
+            android:src="@drawable/ic_add_image" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_post_upload_three"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
+            android:src="@drawable/ic_add_image" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_post_upload_four"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
+            android:src="@drawable/ic_add_image" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

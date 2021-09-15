@@ -22,8 +22,8 @@ public class AppConstants {
     public static final String stateOnTheWay = "On The Way";
     public static final String stateLocationReached = "Location Reached";
     public static final String stateWorkInProgress = "Work In-Progress";
-    public static final String stateSuccess = "Success";
-    public static final String stateFailed = "Failed";
+    public static final String stateSuccess = "Order Success";
+    public static final String stateFailed = "Order Failed";
 
 
     public static final String swipeAcknowledge = "Acknowledge";

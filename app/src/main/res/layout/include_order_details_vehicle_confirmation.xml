@@ -22,37 +22,39 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1.99"
+            android:singleLine="true"
             android:text="ka02hn9686"
             android:textAllCaps="true"
             android:textAppearance="@style/MyTextAppearance"
             android:textColor="@color/black" />
 
-
-        <ImageView
-            android:id="@+id/img_vehicle_no_like"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_vehicle_no_like"
             android:layout_width="@dimen/sizeThirty"
             android:layout_height="@dimen/sizeThirty"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="@dimen/sizeEight"
             android:layout_marginEnd="@dimen/sizeEight"
-            android:background="@drawable/ic_oval_grey"
-            android:contentDescription="@string/app_name"
-            android:padding="@dimen/sizeFour"
+            android:background="@drawable/ic_oval_white"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_close_round" />
+            android:src="@drawable/ic_like" />
 
-        <ImageView
-            android:id="@+id/img_vehicle_no_dislike"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_vehicle_no_dislike"
             android:layout_width="@dimen/sizeThirty"
             android:layout_height="@dimen/sizeThirty"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="@dimen/sizeEight"
             android:layout_marginEnd="@dimen/sizeEight"
-            android:background="@drawable/ic_oval_grey"
-            android:contentDescription="@string/app_name"
-            android:padding="@dimen/sizeFour"
+            android:background="@drawable/ic_oval_white"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_close_round" />
+            android:src="@drawable/ic_dislike" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -73,117 +75,183 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1.99"
+            android:singleLine="true"
             android:text="Yamaha Fazer v1"
             android:textAppearance="@style/MyTextAppearance"
             android:textColor="@color/black" />
 
-        <ImageView
-            android:id="@+id/img_vehicle_name_like"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_vehicle_name_like"
             android:layout_width="@dimen/sizeThirty"
             android:layout_height="@dimen/sizeThirty"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="@dimen/sizeEight"
             android:layout_marginEnd="@dimen/sizeEight"
-            android:background="@drawable/ic_oval_grey"
-            android:contentDescription="@string/app_name"
-            android:padding="@dimen/sizeFour"
+            android:background="@drawable/ic_oval_white"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_close_round" />
+            android:src="@drawable/ic_like" />
 
-        <ImageView
-            android:id="@+id/img_vehicle_name_dislike"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_vehicle_name_dislike"
             android:layout_width="@dimen/sizeThirty"
             android:layout_height="@dimen/sizeThirty"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="@dimen/sizeEight"
             android:layout_marginEnd="@dimen/sizeEight"
-            android:background="@drawable/ic_oval_grey"
-            android:contentDescription="@string/app_name"
-            android:padding="@dimen/sizeFour"
+            android:background="@drawable/ic_oval_white"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_close_round" />
-
+            android:src="@drawable/ic_dislike" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-
     <!--    Vehicle Odometer    -->
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/edt_order_vehicle_odometer"
+        android:id="@+id/edt_order_details_vehicle_odometer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginTop="@dimen/sizeSixteen"
         android:layout_weight="0.6"
-        android:background="@color/colorWhiteSmoke"
+        android:background="@drawable/bg_edt_fill_grey_round_corner_black_stroke"
         android:gravity="start"
         android:hint="Odameter i.e 27500"
         android:inputType="number"
-        android:padding="@dimen/sizeTwo"
-        android:paddingTop="@dimen/sizeEight"
-        android:paddingBottom="@dimen/sizeEight"
+        android:padding="@dimen/sizeEight"
         android:singleLine="true"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/linear_order_vehicle_confirmation_vehicle_model" />
 
-
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_label_order_vehicle_confirmation_pre_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginTop="@dimen/sizeTwenty"
+        android:singleLine="true"
         android:text="Pre - Order Image Upload (Mandatory)"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/edt_order_vehicle_odometer" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_order_details_vehicle_odometer" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_order_vehicle_confirmation_pre_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/sizeEight"
         android:orientation="horizontal"
-        android:paddingTop="@dimen/sizeSixteen"
-        android:paddingBottom="@dimen/sizeSixteen"
+        android:paddingTop="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeEight"
         android:weightSum="4"
         app:layout_constraintTop_toBottomOf="@+id/tv_label_order_vehicle_confirmation_pre_image">
 
-        <ImageView
-            android:id="@+id/img_upload_one"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_pre_upload_one"
             android:layout_width="@dimen/sizeThirty"
             android:layout_height="@dimen/sizeFortySix"
             android:layout_weight="1"
-            android:contentDescription="@string/app_name"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
             android:src="@drawable/ic_add_image" />
 
-        <ImageView
-            android:id="@+id/img_upload_second"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_pre_upload_second"
             android:layout_width="@dimen/sizeThirty"
             android:layout_height="@dimen/sizeFortySix"
             android:layout_marginStart="@dimen/sizeEight"
             android:layout_weight="1"
-            android:contentDescription="@string/app_name"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
             android:src="@drawable/ic_add_image" />
 
-        <ImageView
-            android:id="@+id/img_upload_three"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_pre_upload_three"
             android:layout_width="@dimen/sizeThirty"
             android:layout_height="@dimen/sizeFortySix"
             android:layout_marginStart="@dimen/sizeEight"
             android:layout_marginEnd="@dimen/sizeEight"
             android:layout_weight="1"
-            android:contentDescription="@string/app_name"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
             android:src="@drawable/ic_add_image" />
 
-        <ImageView
-            android:id="@+id/img_upload_four"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_order_details_pre_upload_four"
             android:layout_width="@dimen/sizeThirty"
             android:layout_height="@dimen/sizeFortySix"
             android:layout_weight="1"
-            android:contentDescription="@string/app_name"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
             android:src="@drawable/ic_add_image" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--Vehicle Type Choose-->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggle_order_vehicle_confirmation_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@+id/linear_order_vehicle_confirmation_pre_image"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_order_vehicle_confirmation_duration_ten"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:paddingTop="@dimen/sizeEight"
+            android:paddingBottom="@dimen/sizeEight"
+            android:text="10 Minutes"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:theme="@style/MaterialToggleButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_order_vehicle_confirmation_duration_fifteen"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:paddingTop="@dimen/sizeEight"
+            android:paddingBottom="@dimen/sizeEight"
+            android:text="15 Minutes"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:theme="@style/MaterialToggleButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_order_vehicle_confirmation_duration_twenty"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:paddingTop="@dimen/sizeEight"
+            android:paddingBottom="@dimen/sizeEight"
+            android:text="20 Minutes"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:theme="@style/MaterialToggleButton" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

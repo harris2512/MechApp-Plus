@@ -1,5 +1,6 @@
 package com.project.readyassist_mechapp.screen.activity.add_vendor_skills;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -41,8 +42,17 @@ public class AddVendorSkills extends AppCompatActivity {
         Fragment fragment = FragmentVendorSkills.newInstance();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frame_add_skill, fragment);
-        ft.addToBackStack("a");
         ft.commit();
+
+
+        skillsBinding.imgVendorAddSkillBack.setOnClickListener(v -> {
+            FragmentManager fm = getFragmentManager();
+            if (getSupportFragmentManager().popBackStackImmediate()) {
+                fm.popBackStack();
+            } else {
+                finish();
+            }
+        });
 
     }
 

@@ -54,6 +54,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:paddingTop="@dimen/sizeFour"
         android:background="@drawable/bg_gray_screen_top_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar_order_details">
@@ -144,8 +145,8 @@
 
                     <ImageView
                         android:id="@+id/img_order_details_vehicle_type"
-                        android:layout_width="@dimen/sizeFortySix"
-                        android:layout_height="@dimen/sizeFortySix"
+                        android:layout_width="@dimen/sizeForty"
+                        android:layout_height="@dimen/sizeForty"
                         android:layout_gravity="center_vertical|start"
                         android:layout_marginStart="@dimen/sizeEight"
                         android:layout_marginEnd="@dimen/sizeEight"
@@ -173,8 +174,7 @@
                             android:text="ka02hn9686"
                             android:textAllCaps="true"
                             android:textAppearance="@style/MyTextAppearance"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/body_regular" />
+                            android:textColor="@color/black" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_order_details_vehicle_name"
@@ -186,7 +186,8 @@
                             android:text="yamaha fazer v1"
                             android:textAllCaps="true"
                             android:textAppearance="@style/MyTextAppearance"
-                            android:textColor="@color/colorGreyDark" />
+                            android:textColor="@color/colorGreyDark"
+                            android:textSize="@dimen/caption_regular" />
 
                     </LinearLayout>
 
@@ -198,7 +199,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="@dimen/sizeSixteen"
-                    android:layout_marginTop="@dimen/sizeThirtyTwo"
+                    android:layout_marginTop="@dimen/sizeSixteen"
                     android:layout_marginEnd="@dimen/sizeSixteen"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
@@ -352,7 +353,7 @@
                     android:paddingTop="@dimen/sizeFour"
                     android:paddingEnd="@dimen/sizeSixteen"
                     android:paddingBottom="@dimen/sizeFour"
-                    android:text="8 hours 45 mins"
+                    android:text="8 hours 45 min"
                     android:textAppearance="@style/MyTextAppearance"
                     android:textColor="@color/black"
                     android:textSize="@dimen/body_regular"
@@ -380,14 +381,32 @@
                     app:layout_constraintTop_toBottomOf="@+id/linear_order_details_pick_location"
                     app:tint="@color/white" />
 
+                <!--Order Vehicle Conformation-->
                 <include
                     android:id="@+id/include_order_vehicle_confirmation"
                     layout="@layout/include_order_details_vehicle_confirmation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/sizeSixteen"
                     android:visibility="gone"
                     app:layout_constraintTop_toBottomOf="@+id/img_order_details_pick_nav_map" />
+
+                <!--Order POST Confirmation-->
+                <include
+                    android:id="@+id/include_order_details_order_completed"
+                    layout="@layout/include_order_details_order_completed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/include_order_vehicle_confirmation" />
+
+                <!--Order Payment-->
+                <include
+                    android:id="@+id/include_order_details_payment"
+                    layout="@layout/include_order_details_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/include_order_details_order_completed" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -421,7 +440,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:letterSpacing="0.05"
+                android:letterSpacing="0.1"
                 android:text="Acknowledge"
                 android:textAllCaps="true"
                 android:textAppearance="@style/MyTextAppearanceBold"

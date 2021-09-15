@@ -42,7 +42,8 @@ public class OrderDetailsActivity extends AppCompatActivity {
     }
 
     private void orderSwipeGesture() {
-        detailsBinding.swipeOrderDetails.setThumb(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_swipe_right, null));
+        detailsBinding.swipeOrderDetails.setThumb(ResourcesCompat.getDrawable(getResources(),
+                R.drawable.ic_swipe_right, null));
         detailsBinding.swipeOrderDetails.setThumbOffset(-16);
 
         detailsBinding.swipeOrderDetails.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -103,14 +104,57 @@ public class OrderDetailsActivity extends AppCompatActivity {
             case AppConstants.swipeLocationReached:
                 detailsBinding.tvOrderDetailsOrderState.setText(AppConstants.stateLocationReached);
                 detailsBinding.tvNewOrderSwipe.setText(AppConstants.swipeStartWork);
-                detailsBinding.linearOrderDetailsCustomerDetails.setVisibility(View.VISIBLE);
-                detailsBinding.tvOrderDetailsOrderPickKm.setVisibility(View.VISIBLE);
-                detailsBinding.tvOrderDetailsOrderPickKmDuration.setVisibility(View.VISIBLE);
-                detailsBinding.imgOrderDetailsPickNavMap.setVisibility(View.VISIBLE);
+                detailsBinding.linearOrderDetailsCustomerDetails.setVisibility(View.GONE);
+                detailsBinding.linearOrderDetailsPickLocation.setVisibility(View.GONE);
+                detailsBinding.tvOrderDetailsOrderPickKm.setVisibility(View.GONE);
+                detailsBinding.tvOrderDetailsOrderPickKmDuration.setVisibility(View.GONE);
+                detailsBinding.imgOrderDetailsPickNavMap.setVisibility(View.GONE);
                 detailsBinding.includeOrderVehicleConfirmation.layoutOrderDetailsVehicleConfirmation
                         .setVisibility(View.VISIBLE);
-                showToast("Location Reached");
                 break;
+
+            case AppConstants.swipeStartWork:
+                detailsBinding.tvOrderDetailsOrderState.setText(AppConstants.stateWorkInProgress);
+                detailsBinding.tvNewOrderSwipe.setText(AppConstants.swipeCompleted);
+                detailsBinding.tvOrderDetailsOrderDate.setVisibility(View.GONE);
+                detailsBinding.tvOrderDetailsOrderEta.setVisibility(View.GONE);
+                detailsBinding.layoutOrderDetailsVehicleDetails.setVisibility(View.GONE);
+                detailsBinding.tvOrderDetailsServiceName.setVisibility(View.GONE);
+                detailsBinding.tvOrderDetailsServiceDesc.setVisibility(View.GONE);
+                detailsBinding.linearOrderDetailsCustomerDetails.setVisibility(View.GONE);
+                detailsBinding.linearOrderDetailsPickLocation.setVisibility(View.GONE);
+                detailsBinding.tvOrderDetailsOrderPickKm.setVisibility(View.GONE);
+                detailsBinding.tvOrderDetailsOrderPickKmDuration.setVisibility(View.GONE);
+                detailsBinding.imgOrderDetailsPickNavMap.setVisibility(View.GONE);
+                detailsBinding.includeOrderVehicleConfirmation.layoutOrderDetailsVehicleConfirmation
+                        .setVisibility(View.GONE);
+                detailsBinding.includeOrderDetailsOrderCompleted.layoutOrderDetailsOrderCompleted
+                        .setVisibility(View.VISIBLE);
+
+                break;
+
+            case AppConstants.swipeCompleted:
+                detailsBinding.tvOrderDetailsOrderState.setText(AppConstants.stateSuccess);
+                detailsBinding.tvNewOrderSwipe.setText(AppConstants.swipeCloseOrder);
+                detailsBinding.tvOrderDetailsOrderDate.setVisibility(View.GONE);
+                detailsBinding.tvOrderDetailsOrderEta.setVisibility(View.GONE);
+                detailsBinding.layoutOrderDetailsVehicleDetails.setVisibility(View.VISIBLE);
+                detailsBinding.tvOrderDetailsServiceName.setVisibility(View.VISIBLE);
+                detailsBinding.tvOrderDetailsServiceDesc.setVisibility(View.VISIBLE);
+                detailsBinding.linearOrderDetailsCustomerDetails.setVisibility(View.GONE);
+                detailsBinding.linearOrderDetailsPickLocation.setVisibility(View.GONE);
+                detailsBinding.tvOrderDetailsOrderPickKm.setVisibility(View.GONE);
+                detailsBinding.tvOrderDetailsOrderPickKmDuration.setVisibility(View.GONE);
+                detailsBinding.imgOrderDetailsPickNavMap.setVisibility(View.GONE);
+                detailsBinding.includeOrderVehicleConfirmation.layoutOrderDetailsVehicleConfirmation
+                        .setVisibility(View.GONE);
+                detailsBinding.includeOrderDetailsOrderCompleted.layoutOrderDetailsOrderCompleted
+                        .setVisibility(View.GONE);
+                detailsBinding.includeOrderDetailsPayment.layoutOrderDetailsPayment
+                        .setVisibility(View.VISIBLE);
+
+                break;
+
         }
 
         resetSeekBar();
@@ -119,7 +163,8 @@ public class OrderDetailsActivity extends AppCompatActivity {
 
     private void resetSeekBar() {
         detailsBinding.swipeOrderDetails.setProgress(0);
-        detailsBinding.swipeOrderDetails.setThumb(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_swipe_right, null));
+        detailsBinding.swipeOrderDetails.setThumb(ResourcesCompat.getDrawable(getResources(),
+                R.drawable.ic_swipe_right, null));
         detailsBinding.swipeOrderDetails.setThumbOffset(-16);
         detailsBinding.swipeOrderDetails.setEnabled(true);
     }
