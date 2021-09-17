@@ -1,11 +1,16 @@
 package com.project.readyassist_mechapp.screen.activity.signin;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.project.readyassist_mechapp.R;
@@ -28,8 +33,14 @@ public class SignInActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP) {
+            setTheme(R.style.status_bar_black);
+        }
+
         signInBinding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(signInBinding.getRoot());
+
+
 
         signInBinding.btnSigninSubmit.setOnClickListener(v -> {
 
@@ -77,8 +88,6 @@ public class SignInActivity extends AppCompatActivity {
         signInBinding.tvSigninLabel.setOnClickListener(v -> {
             startActivity(new Intent(this, VendorSkillActivity.class));
         });
-
-
 
 
     }

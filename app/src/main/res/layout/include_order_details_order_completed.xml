@@ -101,7 +101,7 @@
 
 
             <ImageView
-                android:id="@+id/img_order_details_pick_nav_map"
+                android:id="@+id/img_order_details_drop_nav_map"
                 android:layout_width="@dimen/sizeForty"
                 android:layout_height="@dimen/sizeForty"
                 android:layout_gravity="center_vertical"

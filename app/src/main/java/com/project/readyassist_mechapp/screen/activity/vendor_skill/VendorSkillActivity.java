@@ -1,6 +1,7 @@
 package com.project.readyassist_mechapp.screen.activity.vendor_skill;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsListView;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.databinding.ActivityVendorSkillBinding;
 import com.project.readyassist_mechapp.screen.activity.add_vendor_skills.AddVendorSkills;
 import com.project.readyassist_mechapp.screen.activity.vendor_skill.adapter.VendorSkillsAdapter;
@@ -28,6 +30,10 @@ public class VendorSkillActivity extends AppCompatActivity implements AdapterVie
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP) {
+            setTheme(R.style.status_bar_black);
+        }
+
         skillBinding = ActivityVendorSkillBinding.inflate(getLayoutInflater());
         setContentView(skillBinding.getRoot());
 

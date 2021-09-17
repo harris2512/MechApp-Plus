@@ -36,4 +36,12 @@ public class AppConstants {
     public static final String swipeCloseOrder = "Close Order";
 
 
+    public static final String[] arrayFailedReason = {
+            "Tools Missing", "Major Issue", "Special Tools Required", "Spares Required", "Other"
+    };
+
+    public static final String[] arrayPaymentType = {
+            "Cash", "PayTm", "GPay", "PhonePe", "Discount"
+    };
+
 }

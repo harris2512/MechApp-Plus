@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-
     tools:context=".screen.activity.order_details.OrderDetailsActivity">
 
     <!--Toolbar-->
@@ -54,8 +53,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingTop="@dimen/sizeFour"
         android:background="@drawable/bg_gray_screen_top_corner"
+        android:paddingTop="@dimen/sizeFour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar_order_details">
 
@@ -396,6 +395,7 @@
                     layout="@layout/include_order_details_order_completed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sizeThirtyTwo"
                     android:visibility="gone"
                     app:layout_constraintTop_toBottomOf="@+id/include_order_vehicle_confirmation" />
 

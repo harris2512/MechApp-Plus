@@ -43,7 +43,6 @@
         tools:ignore="AllowBackup"
         tools:targetApi="n">
 
-
         <activity android:name=".screen.activity.splash.SplashScreenActivity">
 
             <intent-filter>
@@ -103,6 +102,10 @@
 
         </activity>
 
+        <!-- META-DATA -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${mapKey}" />
 
     </application>
 

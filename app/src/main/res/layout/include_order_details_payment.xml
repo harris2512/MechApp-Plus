@@ -101,18 +101,21 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_paid" />
 
     <!--Payment Type-->
-    <com.project.readyassist_mechapp.helper.CustomSpinner
-        android:id="@+id/spinner_order_details_payment_type"
-        style="@style/CustomSpinner"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_details_payment_type"
         android:layout_width="0dp"
-        android:layout_height="@dimen/sizeFortySix"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/sizeThirtyTwo"
         android:layout_marginEnd="@dimen/sizeEight"
         android:background="@drawable/bg_edt_fill_grey_round_corner_black_stroke"
-        android:dropDownWidth="wrap_content"
-        android:dropDownHeight="wrap_content"
-        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
-        android:popupBackground="@android:color/white"
+        android:drawableEnd="@drawable/ic_arrow_drop_down_circle"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeTwelve"
+        android:text="Cash"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/guideline_order_details_payment_vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_order_details_payment_due" />
@@ -121,7 +124,7 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edt_order_details_payment_amount"
         android:layout_width="0dp"
-        android:layout_height="@dimen/sizeFortySix"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/sizeEight"
         android:layout_marginTop="@dimen/sizeThirtyTwo"
         android:background="@drawable/bg_fill_gray_editext"
@@ -181,6 +184,7 @@
         android:layout_marginTop="@dimen/sizeThirtyTwo"
         android:background="@drawable/bg_edt_fill_grey_round_corner_black_stroke"
         android:padding="@dimen/sizeEight"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/btn_order_details_payment_submit">
 
         <!--Invoice Id-->
