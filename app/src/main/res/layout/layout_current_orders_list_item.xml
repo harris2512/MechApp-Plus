@@ -6,6 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/sizeSixteen"
     android:background="@drawable/bg_white_screen_corner"
+    android:clickable="true"
+    android:focusable="true"
     android:padding="@dimen/sizeEight">
 
     <com.google.android.material.textview.MaterialTextView
