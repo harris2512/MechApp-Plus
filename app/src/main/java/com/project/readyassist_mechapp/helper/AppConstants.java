@@ -2,6 +2,16 @@ package com.project.readyassist_mechapp.helper;
 
 public class AppConstants {
 
+    public static final String mStartDayCharge = "06:00 AM";
+    public static final String mStartNightCharge = "08:00 PM";
+
+
+    public static final int sIdle = 0;
+    public static final int sInTransit = 1;
+    public static final int sBusy = 2;
+    public static final int sOnBreak = 3;
+    public static final int sNotOnDuty = 4;
+
     public static final String[] arrayPopularServices = {
             "Battery Jumpstart",
             "Flat Tyre (Tube)",

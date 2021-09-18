@@ -22,6 +22,11 @@
     <color name="colorViewBorder">#F5F5F5</color>
     <color name="colorNightBlueDark">#E21B3643</color>
     <color name="colorNightBlueLight">#401B3643</color>
+
+    <color name="colorWaterYellow">#80FFF8E1</color>
     <color name="colorWaterGreen">#80E8F5E9</color>
+    <color name="colorWaterRed">#FBE9E7</color>
+    <color name="colorWaterBlack">#26000000</color>
+
 
 </resources>
