@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gray_screen_top_corner"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginTop="@dimen/sizeSixty"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:layout_marginBottom="@dimen/sizeSixteen"
+            android:background="@drawable/bg_white_screen_corner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_account_profile">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_account_profile"
+            android:layout_width="@dimen/sizeHundred"
+            android:layout_height="@dimen/sizeHundred"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:background="@drawable/bg_oval_gradient_border"
+            android:padding="@dimen/sizeTwo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_vendor_banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_account_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="Mohammed Harris"
+            android:textAllCaps="true"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_account_profile" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_account_user_mobile_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginTop="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="+91 9500348308"
+            android:textAllCaps="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_account_username" />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/toggle_account_status"
+            android:layout_width="@dimen/sizeFortySix"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_marginTop="@dimen/sizeThirtyTwo"
+            android:background="@drawable/toggle_selector"
+            android:checked="true"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_account_user_mobile_no" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_account_off_duty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeEight"
+            android:singleLine="true"
+            android:text="Off-Duty"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/colorGreyLight"
+            app:layout_constraintBottom_toBottomOf="@+id/toggle_account_status"
+            app:layout_constraintEnd_toStartOf="@id/toggle_account_status"
+            app:layout_constraintTop_toTopOf="@+id/toggle_account_status" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_account_on_duty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeEight"
+            android:singleLine="true"
+            android:text="On-Duty"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/toggle_account_status"
+            app:layout_constraintStart_toEndOf="@id/toggle_account_status"
+            app:layout_constraintTop_toTopOf="@+id/toggle_account_status" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_account_user_shift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:text="Shift"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toggle_account_status" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_account_user_shift"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center_vertical|end"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:text="9 AM to 7 PM (2nd Shift)"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_account_user_shift"
+            app:layout_constraintTop_toBottomOf="@+id/toggle_account_status" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_account_user_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:text="Team"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_account_user_shift" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_account_user_team"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center|end"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:text="Bangalore Urban"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_account_user_team"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_account_user_shift" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_account_user_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:text="Role"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_account_user_team" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_account_user_role"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center|end"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:text="Mechanic | Seller"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_account_user_role"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_account_user_team" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_account_user_sign_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeFortySix"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:background="@drawable/bg_edt_fill_grey_round_corner_yellow_stroke"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:padding="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:text="Sign out"
+            android:textAllCaps="true"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/headline_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_account_user_role" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

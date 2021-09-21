@@ -81,21 +81,21 @@ public class PopularServicesAdapter extends RecyclerView.Adapter<PopularServices
         mHolder = holder;
         mPosition = holder.getAdapterPosition();
 
-        Random rnd = new Random();
-        int currentColor = Color.argb(55, rnd.nextInt(270), rnd.nextInt(276),
-                rnd.nextInt(175));
-        holder.layout_popular_services_item.setBackgroundColor(currentColor);
+//        Random rnd = new Random();
+//        int currentColor = Color.argb(35, rnd.nextInt(270), rnd.nextInt(276),
+//                rnd.nextInt(175));
+//        holder.layout_popular_services_item.setBackgroundColor(currentColor);
 
 
         holder.tv_popular_services_item.setText(arrayServices[position]);
 
-//        if (getThisPosition() != -1 && position == getThisPosition()) {
-//            holder.layout_popular_services_item.setBackground(ResourcesCompat.getDrawable(context.getResources(),
-//                    R.drawable.bg_selected_primary_corner, null));
-//        } else {
-//            holder.layout_popular_services_item.setBackground(ResourcesCompat.getDrawable(context.getResources(),
-//                    R.drawable.bg_unselected_primary_corner, null));
-//        }
+        if (getThisPosition() != -1 && position == getThisPosition()) {
+            holder.layout_popular_services_item.setBackground(ResourcesCompat.getDrawable(context.getResources(),
+                    R.drawable.bg_selected_primary_corner, null));
+        } else {
+            holder.layout_popular_services_item.setBackground(ResourcesCompat.getDrawable(context.getResources(),
+                    R.drawable.bg_unselected_primary_corner, null));
+        }
 
 
         if (onRecyclerViewPaymentItemClickListener != null) {
@@ -124,7 +124,7 @@ public class PopularServicesAdapter extends RecyclerView.Adapter<PopularServices
         protected ConstraintLayout layout_popular_services_item;
         protected ImageView img_popular_services_item;
         protected TextView tv_popular_services_item;
-        protected CardView card_add_skill_service_list;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -132,7 +132,7 @@ public class PopularServicesAdapter extends RecyclerView.Adapter<PopularServices
             layout_popular_services_item = itemView.findViewById(R.id.layout_popular_services_item);
             img_popular_services_item = itemView.findViewById(R.id.img_popular_services_item);
             tv_popular_services_item = itemView.findViewById(R.id.tv_popular_services_item);
-            card_add_skill_service_list = itemView.findViewById(R.id.card_add_skill_service_list);
+
 
 
         }

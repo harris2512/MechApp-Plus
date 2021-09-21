@@ -1,6 +1,7 @@
 package com.project.readyassist_mechapp.screen.activity.add_vendor_skills;
 
 import android.app.FragmentManager;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -26,6 +27,10 @@ public class AddVendorSkills extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP) {
+            setTheme(R.style.status_bar_black);
+        }
+
         skillsBinding = ActivityAddVendorSkillsBinding.inflate(getLayoutInflater());
         setContentView(skillsBinding.getRoot());
 

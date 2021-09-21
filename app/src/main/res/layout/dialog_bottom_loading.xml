@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_parent_find_help"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_screen_top_corner"
+    android:orientation="vertical"
+    android:padding="@dimen/sizeSixteen">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sizeHundred"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/contentDescription"
+        android:visibility="visible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/bottom_loader" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_dialog_bottom_loading_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.01"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle_regular" />
+
+    <TextView
+        android:id="@+id/tv_dialog_bottom_loading_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginBottom="@dimen/sizeThirtyTwo"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.05"
+        android:text="Please wait a moment to connect the call. The call will be first connecting to you and then will connect to customer."
+        android:textAppearance="@style/MyTextAppearance" />
+
+</LinearLayout>

@@ -21,7 +21,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/img_home_back"
+                android:id="@+id/img_home_menu"
                 android:layout_width="@dimen/sizeFortySix"
                 android:layout_height="@dimen/sizeFortySix"
                 android:layout_margin="@dimen/sizeEight"
@@ -33,19 +33,19 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.project.readyassist_mechapp.utils.MyAppBold
+                android:id="@+id/tv_home_header"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/sizeEight"
                 android:gravity="center_vertical"
                 android:letterSpacing="0.05"
-                android:text="Active Requests (3)"
                 android:textColor="@color/black"
                 android:textSize="@dimen/headline_small"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/img_home_back"
+                app:layout_constraintBottom_toBottomOf="@+id/img_home_menu"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/img_home_back"
-                app:layout_constraintTop_toTopOf="@+id/img_home_back" />
+                app:layout_constraintStart_toEndOf="@id/img_home_menu"
+                app:layout_constraintTop_toTopOf="@+id/img_home_menu" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -59,6 +59,37 @@
             android:paddingBottom="@dimen/sizeThirtyTwo"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/toolbar_home">
+
+            <!--My Orders-->
+            <ImageView
+                android:id="@+id/img_order_nav_home"
+                android:layout_width="@dimen/sizeTwenty"
+                android:layout_height="@dimen/sizeTwenty"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/ic_my_orders"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_orders_nav_home"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_orders_nav_home" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_orders_nav_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/sizeTwelve"
+                android:text="My Orders"
+                android:textAppearance="@style/MyTextAppearance"
+                android:textColor="@color/black"
+                android:textSize="@dimen/body_regular"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_nav_home_account"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
             <!--My Account-->
             <ImageView
@@ -86,7 +117,7 @@
                 android:textSize="@dimen/body_regular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/img_nav_home_account"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_orders_nav_home" />
 
             <!--My History-->
             <ImageView
@@ -144,19 +175,19 @@
                 app:layout_constraintStart_toEndOf="@+id/img_earning_nav_home"
                 app:layout_constraintTop_toBottomOf="@+id/tv_history_nav_home" />
 
-            <!--Logout-->
+            <!--My Service providers-->
             <ImageView
-                android:id="@+id/img_logout_nav_home"
+                android:id="@+id/img_vendors_nav_home"
                 android:layout_width="@dimen/sizeTwenty"
                 android:layout_height="@dimen/sizeTwenty"
                 android:contentDescription="@string/contentDescription"
-                android:src="@drawable/ic_logout"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_logout_nav_home"
+                android:src="@drawable/ic_my_vendors"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_vendors_nav_home"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_logout_nav_home" />
+                app:layout_constraintTop_toTopOf="@+id/tv_vendors_nav_home" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_logout_nav_home"
+                android:id="@+id/tv_vendors_nav_home"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
@@ -164,13 +195,42 @@
                 android:focusable="true"
                 android:gravity="center_vertical"
                 android:padding="@dimen/sizeTwelve"
-                android:text="Sign Out"
+                android:text="Service Providers"
+                android:textAppearance="@style/MyTextAppearance"
+                android:textColor="@color/black"
+                android:textSize="@dimen/body_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_vendors_nav_home"
+                app:layout_constraintTop_toBottomOf="@+id/tv_earning_nav_home" />
+
+            <!--My Sales-->
+            <ImageView
+                android:id="@+id/img_logout_nav_home"
+                android:layout_width="@dimen/sizeTwenty"
+                android:layout_height="@dimen/sizeTwenty"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/ic_sale_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_sales_nav_home"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_sales_nav_home" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_sales_nav_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/sizeTwelve"
+                android:text="My Sales"
                 android:textAppearance="@style/MyTextAppearance"
                 android:textColor="@color/black"
                 android:textSize="@dimen/body_regular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/img_logout_nav_home"
-                app:layout_constraintTop_toBottomOf="@+id/tv_earning_nav_home" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_vendors_nav_home" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -181,13 +241,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_navigation">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_current_orders"
+            <FrameLayout
+                android:id="@+id/frame_home"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_marginTop="@dimen/sizeFour"
-                android:scrollbars="none"
-                tools:listitem="@layout/layout_current_orders_list_item" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

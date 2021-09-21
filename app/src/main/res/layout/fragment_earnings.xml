@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gray_screen_top_corner"
+    android:padding="@dimen/sizeSixteen">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_earning_previous_date"
+        android:layout_width="@dimen/sizeThirty"
+        android:layout_height="@dimen/sizeThirty"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/sizeSixteen"
+        android:layout_marginEnd="@dimen/sizeSixteen"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:src="@drawable/ic_left_fill_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_selected_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_earning_selected_date"
+        app:tint="@color/colorNightBlueLight" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_selected_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:gravity="center_vertical|center_horizontal"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeSixteen"
+        android:text="22 Mar 2021"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/body_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_earning_next_date"
+        android:layout_width="@dimen/sizeThirty"
+        android:layout_height="@dimen/sizeThirty"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/sizeSixteen"
+        android:layout_marginEnd="@dimen/sizeSixteen"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:src="@drawable/ic_right_fill_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_selected_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_earning_selected_date"
+        app:tint="@color/colorNightBlueLight" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_details_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeTwelve"
+        android:gravity="center_vertical|center_horizontal"
+        android:letterSpacing="0.05"
+        android:text="@string/label_cleared"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreenPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@+id/tv_earning_selected_date" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_earning_receivable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:background="@color/colorGreenPrimary"
+        android:gravity="center_vertical|center_horizontal"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeEight"
+        android:text="@string/label_receivable_formula"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tv_label_earning_payable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_earning_details_status" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_label_earning_payable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:background="@color/colorYellowPrimary"
+        android:gravity="center_vertical|center_horizontal"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeEight"
+        android:text="@string/label_payable_formula"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_earning_receivable"
+        app:layout_constraintTop_toBottomOf="@+id/tv_earning_details_status" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_receivable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="@dimen/sizeEight"
+        android:text="0"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tv_earning_payable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_earning_receivable" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_payable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="@dimen/sizeEight"
+        android:text="0"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_earning_receivable"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_earning_payable" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_label_total_earnings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeThirtyTwo"
+        android:gravity="start|center_horizontal"
+        android:letterSpacing="0.05"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingTop="@dimen/sizeSixteen"
+        android:paddingEnd="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeSixteen"
+        android:text="@string/label_total_earnings"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_earning_payable" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_total_earnings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_horizontal"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeEight"
+        android:text="0"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_total_earnings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_earning_label_total_earnings" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGreyLight"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_total_earnings" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_label_commission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_horizontal"
+        android:letterSpacing="0.05"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingTop="@dimen/sizeSixteen"
+        android:paddingEnd="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeSixteen"
+        android:text="@string/label_commission"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_earning_label_total_earnings" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_commission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_horizontal"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeEight"
+        android:text="0"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_commission"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_earning_label_commission" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGreyLight"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_commission" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_label_cash_collected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_horizontal"
+        android:letterSpacing="0.05"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingTop="@dimen/sizeSixteen"
+        android:paddingEnd="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeSixteen"
+        android:text="@string/label_cash_collected"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_earning_label_commission" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_cash_collected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_horizontal"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeEight"
+        android:text="0"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_cash_collected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_earning_label_cash_collected" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGreyLight"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_cash_collected" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_label_carry_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_horizontal"
+        android:letterSpacing="0.05"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingTop="@dimen/sizeSixteen"
+        android:paddingEnd="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeSixteen"
+        android:text="@string/label_carry_forward"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_earning_label_cash_collected" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_earning_carry_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_horizontal"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeEight"
+        android:text="0"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_carry_forward"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_earning_label_carry_forward" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGreyLight"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_carry_forward" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:gravity="start|center_horizontal"
+        android:letterSpacing="0.05"
+        android:padding="@dimen/sizeEight"
+        android:text="@string/label_transaction_details_desc"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/colorGreyDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_earning_label_carry_forward" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

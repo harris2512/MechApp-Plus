@@ -98,7 +98,7 @@ public class CurrentOrdersListAdapter extends RecyclerView.Adapter<CurrentOrders
         }
 
 
-        holder.layout_current_orders_item.setOnClickListener(v -> {
+        holder.tv_action_order_list_item.setOnClickListener(v -> {
             context.startActivity(new Intent(context, OrderDetailsActivity.class));
         });
 
@@ -115,13 +115,13 @@ public class CurrentOrdersListAdapter extends RecyclerView.Adapter<CurrentOrders
 
         protected ConstraintLayout layout_current_orders_item;
         protected ImageView img_popular_services_item;
-        protected TextView tv_popular_services_item;
+        protected TextView tv_action_order_list_item;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             layout_current_orders_item = itemView.findViewById(R.id.layout_current_orders_item);
-//            img_popular_services_item = itemView.findViewById(R.id.img_popular_services_item);
+            tv_action_order_list_item = itemView.findViewById(R.id.tv_action_order_list_item);
 //            tv_popular_services_item = itemView.findViewById(R.id.tv_popular_services_item);
 
 

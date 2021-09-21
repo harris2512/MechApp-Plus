@@ -2,6 +2,7 @@ package com.project.readyassist_mechapp.screen.activity.onboard;
 
 import android.app.FragmentManager;
 import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +31,10 @@ public class OnboardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP) {
+            setTheme(R.style.status_bar_black);
+        }
+
         onboardBinding = ActivityOnboardBinding.inflate(getLayoutInflater());
         setContentView(onboardBinding.getRoot());
 

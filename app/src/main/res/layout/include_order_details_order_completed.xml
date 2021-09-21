@@ -41,6 +41,7 @@
         android:textAllCaps="true"
         android:textAppearance="@style/MyTextAppearanceBold"
         android:textColor="@color/white"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/tv_order_details_order_duration_timer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_order_details_order_duration_timer" />
@@ -101,7 +102,7 @@
 
 
             <ImageView
-                android:id="@+id/img_order_details_pick_nav_map"
+                android:id="@+id/img_order_details_drop_nav_map"
                 android:layout_width="@dimen/sizeForty"
                 android:layout_height="@dimen/sizeForty"
                 android:layout_gravity="center_vertical"

@@ -43,7 +43,6 @@
         tools:ignore="AllowBackup"
         tools:targetApi="n">
 
-
         <activity android:name=".screen.activity.splash.SplashScreenActivity">
 
             <intent-filter>
@@ -96,6 +95,24 @@
             android:windowSoftInputMode="adjustPan" />
 
         <activity
+            android:name=".screen.activity.subscription_sales.SubscriptionSalesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/status_bar_transparent"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".screen.activity.service_providers.ServiceProvidersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/status_bar_transparent"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".screen.activity.create_service_provider.CreateServiceProviderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/status_bar_transparent"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
             android:name=".screen.activity.DummyActivity"
             android:screenOrientation="portrait"
             android:theme="@style/status_bar_transparent"
@@ -103,6 +120,10 @@
 
         </activity>
 
+        <!-- META-DATA -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${mapKey}" />
 
     </application>
 

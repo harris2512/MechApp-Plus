@@ -6,6 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/sizeSixteen"
     android:background="@drawable/bg_white_screen_corner"
+    android:clickable="true"
+    android:focusable="true"
     android:padding="@dimen/sizeEight">
 
     <com.google.android.material.textview.MaterialTextView
@@ -37,38 +39,22 @@
         android:id="@+id/tv_vehicle_type_order_list_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/sizeEight"
-        android:layout_marginEnd="@dimen/sizeEight"
         android:background="@drawable/bg_fill_black_corner_box"
         android:gravity="center_horizontal|center_vertical"
         android:letterSpacing="0.05"
-        android:padding="@dimen/sizeFour"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingTop="@dimen/sizeFour"
+        android:paddingEnd="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeFour"
         android:singleLine="true"
         android:text="2W"
         android:textAllCaps="true"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/white"
         android:textSize="@dimen/caption_regular"
-        app:layout_constraintEnd_toStartOf="@+id/tv_km_order_list_item"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_km_order_list_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/sizeEight"
-        android:background="@drawable/bg_fill_grey_corner_box"
-        android:gravity="center"
-        android:letterSpacing="0.05"
-        android:padding="@dimen/sizeFour"
-        android:singleLine="true"
-        android:text="452 km"
-        android:textAllCaps="true"
-        android:textAppearance="@style/MyTextAppearance"
-        android:textColor="@color/black"
-        android:textSize="@dimen/caption_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_order_date_order_list_item"
@@ -91,9 +77,9 @@
         android:layout_height="wrap_content"
         android:letterSpacing="0.05"
         android:padding="@dimen/sizeFour"
-        android:text="RSA - Accelerator Cable Replacement"
+        android:text="RSA - Battery Jump-Start"
         android:textAppearance="@style/MyTextAppearance"
-        android:textColor="@color/black"
+        android:textColor="@color/colorGreyDark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_order_date_order_list_item" />
 
@@ -101,6 +87,7 @@
         android:id="@+id/tv_order_vehicle_order_list_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
         android:letterSpacing="0.05"
         android:padding="@dimen/sizeFour"
         android:text="Honda - Unicorn 160r"
@@ -114,7 +101,6 @@
         android:id="@+id/tv_order_address_order_list_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/sizeEight"
         android:layout_marginBottom="@dimen/sizeEight"
         android:background="@drawable/bg_fill_water_green_corner_stroke_black_box"
         android:clickable="true"
@@ -129,6 +115,70 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_order_vehicle_order_list_item" />
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_km_order_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:background="@drawable/bg_fill_grey_corner_box"
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingTop="@dimen/sizeFour"
+        android:paddingEnd="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeFour"
+        android:singleLine="true"
+        android:text="42 km"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_address_order_list_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_duration_order_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sizeSixteen"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginEnd="@dimen/sizeSixteen"
+        android:background="@drawable/bg_fill_grey_corner_box"
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingTop="@dimen/sizeFour"
+        android:paddingEnd="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeFour"
+        android:singleLine="true"
+        android:text="01 hours 04 min"
+        android:textAppearance="@style/MyTextAppearance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintStart_toEndOf="@+id/tv_km_order_list_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_address_order_list_item" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_payment_order_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:background="@drawable/bg_edt_fill_grey_round_corner_yellow_stroke"
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:paddingStart="@dimen/sizeSixteen"
+        android:paddingTop="@dimen/sizeFour"
+        android:paddingEnd="@dimen/sizeSixteen"
+        android:paddingBottom="@dimen/sizeFour"
+        android:singleLine="true"
+        android:text="Paid"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/colorGreenPrimaryDark"
+        android:textSize="@dimen/caption_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_address_order_list_item" />
+
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_action_order_list_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -138,13 +188,12 @@
         android:focusable="true"
         android:gravity="center"
         android:letterSpacing="0.1"
-        android:padding="@dimen/sizeEight"
+        android:padding="@dimen/sizeTwelve"
         android:text="Acknowledge"
         android:textAllCaps="true"
         android:textAppearance="@style/MyTextAppearanceBold"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_order_address_order_list_item" />
-
+        app:layout_constraintTop_toBottomOf="@+id/tv_km_order_list_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

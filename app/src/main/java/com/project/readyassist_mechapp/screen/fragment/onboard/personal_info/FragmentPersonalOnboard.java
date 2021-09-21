@@ -34,7 +34,6 @@ public class FragmentPersonalOnboard extends Fragment {
         return new FragmentPersonalOnboard();
     }
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -139,8 +138,6 @@ public class FragmentPersonalOnboard extends Fragment {
 
     @Subscribe
     public void getMessage(Events.ActivityFragmentMessage activityFragmentMessage) {
-
-
     }
 
     @Override

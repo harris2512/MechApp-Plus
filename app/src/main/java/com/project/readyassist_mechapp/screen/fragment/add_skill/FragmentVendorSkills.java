@@ -136,7 +136,7 @@ public class FragmentVendorSkills extends Fragment {
                 btn_add_skill_next.setVisibility(position >= 0 ? View.VISIBLE : View.GONE);
 
 
-                //  servicesAdapter.notifyDataSetChanged();
+                servicesAdapter.notifyDataSetChanged();
             }
 
             @Override

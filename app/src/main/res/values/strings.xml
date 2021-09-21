@@ -82,6 +82,27 @@
     <string name="label_created_at">Created at</string>
 
 
+    <!--    Earnings    -->
+    <string name="label_cleared">Cleared</string>
+    <string name="label_pending">Pending</string>
+    <string name="label_receivable_formula">Receivable \nA - (B+C+D)</string>
+    <string name="label_payable_formula">Payable \n(B+C+D) - A</string>
+    <string name="label_total_earnings">Total Earnings (A)</string>
+    <string name="label_commission">Commission (B)</string>
+    <string name="label_cash_collected">Cash Collected (C)</string>
+    <string name="label_carry_forward">Carry Forward (D)</string>
+    <string name="label_transaction_details">Transaction Details</string>
+    <string name="label_transaction_details_desc">Receivable is carry forwarded to the next week due to missing PAN details.</string>
+
+    <!--Service Providers-->
+    <string name="label_sub_seller">Sub-Sellers</string>
+    <string name="label_active">Active</string>
+    <string name="label_in_active">In - Active</string>
+    <string name="label_new">New</string>
+
+    <!-- Create Service Providers-->
+
+
     <!--Global-->
     <string name="contentDescription">TODO</string>
     <string name="digit_text">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ </string>

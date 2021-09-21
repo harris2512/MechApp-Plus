@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gray_screen_top_corner"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/sizeFour"
+        android:fitsSystemWindows="true"
+        android:paddingBottom="@dimen/sizeThirtyTwo">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_split_service_providers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_service_providers_personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:text="Personal Details"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_service_providers_first_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:background="@drawable/bg_fill_gray_editext"
+            android:gravity="center_vertical|start"
+            android:hint="First Name"
+            android:inputType="text"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeTwelve"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorGreyDark"
+            app:layout_constraintEnd_toStartOf="@+id/edt_service_providers_last_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_service_providers_personal" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_service_providers_last_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:background="@drawable/bg_fill_gray_editext"
+            android:gravity="center_vertical|start"
+            android:hint="Last Name"
+            android:inputType="text"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeTwelve"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorGreyDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edt_service_providers_first_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_service_providers_personal" />
+
+        <!--Email-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_service_providers_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:background="@drawable/bg_fill_gray_editext"
+            android:digits="@string/digits_email"
+            android:gravity="center_vertical|start"
+            android:hint="Email ID"
+            android:inputType="textEmailAddress"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeTwelve"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorGreyDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_service_providers_last_name" />
+
+        <!--Mobile-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_service_providers_mobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:background="@drawable/bg_fill_gray_editext"
+            android:digits="@string/digits_email"
+            android:gravity="center_vertical|start"
+            android:hint="Mobile No."
+            android:inputType="number"
+            android:letterSpacing="0.05"
+            android:maxLength="10"
+            android:padding="@dimen/sizeTwelve"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorGreyDark"
+            app:layout_constraintEnd_toEndOf="@id/guideline_vertical_split_service_providers"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_service_providers_email" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_service_providers_send_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:background="@drawable/button_bg_secondary"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingTop="@dimen/sizeTwelve"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:paddingBottom="@dimen/sizeTwelve"
+            android:text="Send OTP"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_service_providers_mobile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_split_service_providers"
+            app:layout_constraintTop_toTopOf="@+id/edt_service_providers_mobile" />
+
+        <!--OTP-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_service_providers_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:background="@drawable/bg_fill_gray_editext"
+            android:digits="@string/digits_email"
+            android:gravity="center_vertical|start"
+            android:hint="OTP"
+            android:inputType="number"
+            android:letterSpacing="0.5"
+            android:maxLength="5"
+            android:padding="@dimen/sizeTwelve"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorGreyDark"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_vertical_split_service_providers"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_service_providers_mobile" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_service_providers_verify_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:background="@drawable/button_bg_secondary"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingTop="@dimen/sizeTwelve"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:paddingBottom="@dimen/sizeTwelve"
+            android:text="Verify OTP"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_service_providers_otp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_split_service_providers"
+            app:layout_constraintTop_toTopOf="@+id/edt_service_providers_otp" />
+
+        <!--Location-->
+        <AutoCompleteTextView
+            android:id="@+id/edt_service_providers_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:background="@drawable/bg_fill_gray_editext"
+            android:digits="@string/digits_email"
+            android:gravity="center_vertical|start"
+            android:hint="Location"
+            android:inputType="textEmailAddress"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeTwelve"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorGreyDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_service_providers_otp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_service_providers_location"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/sizeForty"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/sizeFour"
+            android:src="@drawable/ic_gps_found"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_service_providers_location"
+            app:layout_constraintEnd_toEndOf="@+id/edt_service_providers_location"
+            app:layout_constraintHorizontal_weight="0.2"
+            app:layout_constraintTop_toTopOf="@+id/edt_service_providers_location" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_service_providers_document"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeThirtyTwo"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.05"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            android:text="Document Details"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/edt_service_providers_location" />
+
+
+        <!--Aadhar-->
+        <AutoCompleteTextView
+            android:id="@+id/edt_service_providers_aadhar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:background="@drawable/bg_fill_gray_editext"
+            android:digits="@string/digits_email"
+            android:gravity="center_vertical|start"
+            android:hint="Aadhar"
+            android:inputType="number"
+            android:letterSpacing="0.05"
+            android:maxLength="12"
+            android:padding="@dimen/sizeTwelve"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorGreyDark"
+            app:layout_constraintEnd_toStartOf="@+id/edt_service_providers_pan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_service_providers_document" />
+
+        <!--PAN-->
+        <AutoCompleteTextView
+            android:id="@+id/edt_service_providers_pan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:background="@drawable/bg_fill_gray_editext"
+            android:digits="@string/digits_email"
+            android:gravity="center_vertical|start"
+            android:hint="PAN"
+            android:inputType="number"
+            android:letterSpacing="0.05"
+            android:maxLength="10"
+            android:padding="@dimen/sizeTwelve"
+            android:singleLine="true"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorGreyDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edt_service_providers_aadhar"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_service_providers_document" />
+
+        <LinearLayout
+            android:id="@+id/linear_service_providers_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/sizeFour"
+            android:paddingBottom="@dimen/sizeFour"
+            android:weightSum="4"
+            app:layout_constraintTop_toBottomOf="@+id/edt_service_providers_pan">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_service_providers_profile"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/sizeFortySix"
+                android:layout_marginStart="@dimen/sizeSixteen"
+                android:layout_marginEnd="@dimen/sizeSixteen"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/sizeTwo"
+                android:src="@drawable/ic_add_image"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_service_providers_aadhar_front"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/sizeFortySix"
+                android:layout_marginStart="@dimen/sizeSixteen"
+                android:layout_marginEnd="@dimen/sizeSixteen"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/sizeTwo"
+                android:src="@drawable/ic_add_image"
+                app:layout_constraintStart_toEndOf="@+id/img_service_providers_profile"
+                app:layout_constraintTop_toBottomOf="@+id/edt_service_providers_pan" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_service_providers_aadhar_back"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/sizeFortySix"
+                android:layout_marginStart="@dimen/sizeSixteen"
+                android:layout_marginEnd="@dimen/sizeSixteen"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/sizeTwo"
+                android:src="@drawable/ic_add_image"
+                app:layout_constraintEnd_toStartOf="@+id/img_service_providers_pan"
+                app:layout_constraintTop_toBottomOf="@+id/edt_service_providers_pan" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_service_providers_pan"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/sizeFortySix"
+                android:layout_marginStart="@dimen/sizeSixteen"
+                android:layout_marginEnd="@dimen/sizeSixteen"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/sizeTwo"
+                android:src="@drawable/ic_add_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_service_providers_pan" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_service_providers_images_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/sizeFour"
+            android:paddingBottom="@dimen/sizeFour"
+            android:weightSum="4"
+            app:layout_constraintTop_toBottomOf="@+id/linear_service_providers_images">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeEight"
+                android:layout_marginEnd="@dimen/sizeEight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Profile Image *"
+                android:textAppearance="@style/MyTextAppearanceBold"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/over_line_regular" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeEight"
+                android:layout_marginEnd="@dimen/sizeEight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Aadhar Front *"
+                android:textAppearance="@style/MyTextAppearanceBold"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/over_line_regular" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeEight"
+                android:layout_marginEnd="@dimen/sizeEight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Aadhar Back *"
+                android:textAppearance="@style/MyTextAppearanceBold"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/over_line_regular" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeEight"
+                android:layout_marginEnd="@dimen/sizeEight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="PAN Card *"
+                android:textAppearance="@style/MyTextAppearanceBold"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="@dimen/over_line_regular" />
+
+        </LinearLayout>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/check_service_providers_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeSixteen"
+            android:checked="false"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.05"
+            android:paddingTop="@dimen/sizeSixteen"
+            android:paddingBottom="@dimen/sizeSixteen"
+            android:text="@string/label_ra_terms_conditions_policy"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            android:textSize="@dimen/caption_regular"
+            android:textStyle="normal"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/linear_service_providers_images_label" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

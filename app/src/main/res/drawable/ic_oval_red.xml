@@ -1,0 +1,17 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="@color/colorWhiteSmoke"
+    tools:targetApi="lollipop">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/colorRedPrimary" />
+        </shape>
+    </item>
+</ripple>
+
+
+    <!--Blue-->
+
+    <!--<gradient android:endColor="#8249F6"-->
+    <!--android:centerColor="#246DA7"-->
+    <!--android:startColor="#8249F6" />-->

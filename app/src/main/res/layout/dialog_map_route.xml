@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/sizeSixteen"
+    android:layout_marginTop="@dimen/sizeEight"
+    android:layout_marginEnd="@dimen/sizeSixteen"
+    android:layout_marginBottom="@dimen/sizeEight"
+    android:background="@drawable/bg_white_screen_corner">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/dialog_map_route"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="@dimen/sizeSixteen"
+        android:background="@drawable/bg_edt_fill_grey_round_corner_black_stroke"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dialog_map_route_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sizeThirtyTwo"
+        android:background="@drawable/button_bg_secondary"
+        android:letterSpacing="0.1"
+        android:text="Cancel"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_map_route_navigate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_map_route" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dialog_map_route_navigate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sizeThirtyTwo"
+        android:background="@drawable/button_bg_primary"
+        android:letterSpacing="0.1"
+        android:text="Navigate"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dialog_map_route_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_map_route" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

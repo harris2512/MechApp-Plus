@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-
     tools:context=".screen.activity.order_details.OrderDetailsActivity">
 
     <!--Toolbar-->
@@ -33,7 +32,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.project.readyassist_mechapp.utils.MyAppBold
-            android:id="@+id/tv_label_onboard"
+            android:id="@+id/tv_header_order_details"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/sizeEight"
@@ -46,7 +45,24 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/img_onboard_back"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_menu_order_details"
             app:layout_constraintStart_toEndOf="@id/img_onboard_back"
+            app:layout_constraintTop_toTopOf="@+id/img_onboard_back" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/img_menu_order_details"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeThirty"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:background="@null"
+            android:padding="@dimen/sizeFour"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_option_menu"
+            app:layout_constraintBottom_toBottomOf="@+id/img_onboard_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_header_order_details"
             app:layout_constraintTop_toTopOf="@+id/img_onboard_back" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -54,8 +70,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingTop="@dimen/sizeFour"
         android:background="@drawable/bg_gray_screen_top_corner"
+        android:paddingTop="@dimen/sizeFour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar_order_details">
 
@@ -396,6 +412,7 @@
                     layout="@layout/include_order_details_order_completed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sizeThirtyTwo"
                     android:visibility="gone"
                     app:layout_constraintTop_toBottomOf="@+id/include_order_vehicle_confirmation" />
 
