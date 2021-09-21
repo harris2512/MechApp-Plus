@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".5" />
+        app:layout_constraintGuide_percent=".4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vLine_signin"
@@ -111,14 +111,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edt_signin_otp" />
 
-
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_signin_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/sizeEight"
-        android:letterSpacing="0.05"
         android:background="?attr/selectableItemBackground"
+        android:letterSpacing="0.05"
         android:padding="@dimen/sizeEight"
         android:text="@string/label_signin_edit"
         android:textAppearance="@style/MyTextAppearanceBold"
@@ -127,5 +126,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/edt_signin_mobile"
         app:layout_constraintEnd_toEndOf="@+id/edt_signin_mobile"
         app:layout_constraintTop_toTopOf="@id/edt_signin_mobile" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.15"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_ra_text"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

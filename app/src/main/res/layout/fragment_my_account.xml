@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gray_screen_top_corner"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:scrollbars="none">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -186,13 +187,12 @@
             android:letterSpacing="0.05"
             android:padding="@dimen/sizeSixteen"
             android:singleLine="true"
-            android:text="Bangalore Urban"
+            android:text="Bangalore Urban City 2"
             android:textAppearance="@style/MyTextAppearance"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_label_account_user_team"
             app:layout_constraintTop_toBottomOf="@+id/tv_label_account_user_shift" />
-
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_label_account_user_role"
@@ -228,6 +228,85 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_label_account_user_team" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_account_user_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:text="Language"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_account_user_role" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_account_user_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeSixteen"
+            android:gravity="center|end"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeSixteen"
+            android:singleLine="true"
+            android:text="English"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_account_user_language"
+            app:layout_constraintTop_toBottomOf="@+id/tv_account_user_role" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_account_user_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeThirtyTwo"
+            android:layout_marginTop="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeThirtyTwo"
+            android:gravity="center|end"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="Need help?"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_account_user_language" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_label_account_user_support_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeThirtyTwo"
+            android:layout_marginEnd="@dimen/sizeThirtyTwo"
+            android:gravity="center|end"
+            android:letterSpacing="0.05"
+            android:singleLine="true"
+            android:text="Contact our support team."
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="@dimen/caption_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_account_user_support" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_account_user_support_call"
+            android:layout_width="@dimen/sizeThirtySix"
+            android:layout_height="@dimen/sizeThirtySix"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/sizeSixteen"
+            android:layout_marginEnd="@dimen/sizeThirtyTwo"
+            android:contentDescription="@string/contentDescription"
+            android:padding="@dimen/sizeTwo"
+            android:src="@drawable/ic_call_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_account_user_support_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_account_user_support" />
+
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_account_user_sign_out"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -247,7 +326,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/headline_small"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_account_user_role" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_account_user_support_desc" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

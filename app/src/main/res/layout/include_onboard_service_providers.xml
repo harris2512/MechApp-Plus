@@ -273,7 +273,7 @@
             android:id="@+id/linear_service_providers_images"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/sizeSixteen"
+            android:layout_marginTop="@dimen/sizeThirtyTwo"
             android:orientation="horizontal"
             android:paddingTop="@dimen/sizeFour"
             android:paddingBottom="@dimen/sizeFour"

@@ -19,6 +19,7 @@ import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.databinding.ActivityHomePageBinding;
 import com.project.readyassist_mechapp.helper.events.Events;
 import com.project.readyassist_mechapp.helper.events.GlobalBus;
+import com.project.readyassist_mechapp.screen.activity.add_vendor_skills.AddVendorSkills;
 import com.project.readyassist_mechapp.screen.activity.subscription_sales.SubscriptionSalesActivity;
 import com.project.readyassist_mechapp.screen.activity.service_providers.ServiceProvidersActivity;
 import com.project.readyassist_mechapp.screen.fragment.current_orders.FragmentCurrentOrders;
@@ -71,11 +72,12 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener 
 
         /*Onclick*/
         homePageBinding.imgHomeMenu.setOnClickListener(this);
-        homePageBinding.tvOrdersNavHome.setOnClickListener(this);
-        homePageBinding.tvAccountNavHome.setOnClickListener(this);
-        homePageBinding.tvEarningNavHome.setOnClickListener(this);
-        homePageBinding.tvVendorsNavHome.setOnClickListener(this);
-        homePageBinding.tvSalesNavHome.setOnClickListener(this);
+        homePageBinding.layoutNavigation.tvOrdersNavHome.setOnClickListener(this);
+        homePageBinding.layoutNavigation.tvAccountNavHome.setOnClickListener(this);
+        homePageBinding.layoutNavigation.tvEarningNavHome.setOnClickListener(this);
+        homePageBinding.layoutNavigation.tvSkillNavHome.setOnClickListener(this);
+        homePageBinding.layoutNavigation.tvVendorsNavHome.setOnClickListener(this);
+        homePageBinding.layoutNavigation.tvSalesNavHome.setOnClickListener(this);
 
     }
 
@@ -88,13 +90,13 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener 
 
             case R.id.img_home_menu:
 
-                if (homePageBinding.layoutNavigation.getVisibility() == View.GONE) {
-                    homePageBinding.layoutNavigation.setVisibility(View.VISIBLE);
+                if (homePageBinding.layoutNavigation.layoutMenuNavigation.getVisibility() == View.GONE) {
+                    homePageBinding.layoutNavigation.layoutMenuNavigation.setVisibility(View.VISIBLE);
                     if (animNavMenu.isRunning())
                         animNavMenu.stop();
                     setAnimNavClose();
                     /*This fades it back in:*/
-                    homePageBinding.layoutNavigation.animate().alpha(1.0f);
+                    homePageBinding.layoutNavigation.layoutMenuNavigation.animate().alpha(1.0f);
                     return;
                 }
 
@@ -143,6 +145,11 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener 
                 closeNavigationMenu();
                 break;
 
+            case R.id.tv_skill_nav_home:
+                startActivity(new Intent(this, AddVendorSkills.class));
+                closeNavigationMenu();
+                break;
+
         }
 
     }
@@ -175,9 +182,9 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener 
     public void getMessage(Events.FragmentActivityMessage msgFragmentToActivityEvent) {
         fragmentState = msgFragmentToActivityEvent.getMessage();
 
-        homePageBinding.imgOrderNavHome.setVisibility(fragmentState.equalsIgnoreCase("1")
+        homePageBinding.layoutNavigation.imgOrderNavHome.setVisibility(fragmentState.equalsIgnoreCase("1")
                 || fragmentState.equalsIgnoreCase("scroll_order") ? View.GONE : View.VISIBLE);
-        homePageBinding.tvOrdersNavHome.setVisibility(fragmentState.equalsIgnoreCase("1")
+        homePageBinding.layoutNavigation.tvOrdersNavHome.setVisibility(fragmentState.equalsIgnoreCase("1")
                 || fragmentState.equalsIgnoreCase("scroll_order") ? View.GONE : View.VISIBLE);
 
         switch (msgFragmentToActivityEvent.getMessage()) {
@@ -250,13 +257,13 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void closeNavigationMenu() {
-        if (homePageBinding.layoutNavigation.getVisibility() == View.VISIBLE) {
-            homePageBinding.layoutNavigation.setVisibility(View.GONE);
+        if (homePageBinding.layoutNavigation.layoutMenuNavigation.getVisibility() == View.VISIBLE) {
+            homePageBinding.layoutNavigation.layoutMenuNavigation.setVisibility(View.GONE);
             if (animNavClose.isRunning())
                 animNavClose.stop();
             setAnimNav();
             /*This fades out a View:*/
-            homePageBinding.layoutNavigation.animate().alpha(0.0f);
+            homePageBinding.layoutNavigation.layoutMenuNavigation.animate().alpha(0.0f);
         }
     }
 

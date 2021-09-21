@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_label_onboard_address_location" />
 
     <ImageButton
-        android:id="@+id/img_location_onboard_address"
+        android:id="@+id/img_location_onboard_location"
         android:layout_width="@dimen/sizeThirtySix"
         android:layout_height="@dimen/sizeThirtySix"
         android:layout_marginEnd="@dimen/sizeSixteen"
@@ -103,6 +103,18 @@
         app:hintTextColor="@color/colorGreyDark"
         app:layout_constraintTop_toBottomOf="@+id/tv_label_onboard_address_first" />
 
+    <ImageButton
+        android:id="@+id/img_location_onboard_address"
+        android:layout_width="@dimen/sizeThirtySix"
+        android:layout_height="@dimen/sizeThirtySix"
+        android:layout_marginEnd="@dimen/sizeSixteen"
+        android:background="@null"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_gps_found"
+        app:layout_constraintBottom_toBottomOf="@id/edt_onboard_address_first"
+        app:layout_constraintEnd_toEndOf="@+id/edt_onboard_address_first"
+        app:layout_constraintTop_toTopOf="@id/edt_onboard_address_first" />
+
 
     <!--Address 2-->
     <com.google.android.material.textview.MaterialTextView
@@ -115,7 +127,7 @@
         android:letterSpacing="0.05"
         android:paddingStart="@dimen/sizeEight"
         android:paddingEnd="@dimen/sizeEight"
-        android:text="@string/label_address2_optional"
+        android:text="@string/label_landmark_optional"
         android:textAppearance="@style/MyTextAppearanceBold"
         android:textSize="@dimen/body_regular"
         app:layout_constraintTop_toBottomOf="@+id/edt_onboard_address_first" />
@@ -131,7 +143,7 @@
         android:layout_marginEnd="@dimen/sizeThirtyTwo"
         android:background="@drawable/bg_fill_gray_editext"
         android:gravity="center_vertical"
-        android:hint="@string/hint_address2_optional"
+        android:hint="@string/hint_landmark_optional"
         android:inputType="text"
         android:letterSpacing="0.05"
         android:maxLength="10"

@@ -40,4 +40,15 @@
 
     </LinearLayout>
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="150dp"
+        android:layout_height="@dimen/sizeHundred"
+        android:alpha="0.15"
+        android:scaleType="fitCenter"
+        android:src="@drawable/readyassist"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
