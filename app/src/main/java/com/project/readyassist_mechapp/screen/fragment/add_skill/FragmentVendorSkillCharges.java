@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,8 @@ public class FragmentVendorSkillCharges extends Fragment {
     protected View view;
     protected Fragment selectedFragment;
     protected SessionManager sessionManager;
+
+    protected TextView tv_bottom_add_skill_submit;
 
 
     public static FragmentVendorSkillCharges newInstance() {
@@ -52,6 +55,13 @@ public class FragmentVendorSkillCharges extends Fragment {
     }
 
     private void init() {
+
+        tv_bottom_add_skill_submit = view.findViewById(R.id.tv_bottom_add_skill_submit);
+
+
+        tv_bottom_add_skill_submit.setOnClickListener(v -> {
+            getActivity().finish();
+        });
 
 
     }

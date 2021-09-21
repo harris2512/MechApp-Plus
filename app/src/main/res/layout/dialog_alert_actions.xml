@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/sizeSixteen"
+    android:background="@drawable/bg_white_screen_corner"
+    android:elevation="@dimen/sizeSix"
+    android:orientation="vertical"
+    android:padding="@dimen/sizeSixteen">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sizeHundred"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/contentDescription"
+        android:visibility="visible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/alert_yellow_ra" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_dialog_alert_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeEight"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.01"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle_regular" />
+
+    <TextView
+        android:id="@+id/tv_dialog_alert_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginBottom="@dimen/sizeThirtyTwo"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.05"
+        android:textAppearance="@style/MyTextAppearance" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_dialog_alert_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/sizeThirtyTwo"
+            android:layout_marginEnd="@dimen/sizeThirtyTwo"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeEight"
+            android:text="Cancel"
+            android:textAppearance="@style/MyTextAppearance"
+            android:textColor="@color/colorGreyDark" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_dialog_alert_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/sizeEight"
+            android:text="Yes, I want"
+            android:textAppearance="@style/MyTextAppearanceBold"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

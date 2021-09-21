@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".screen.activity.create_service_provider.CreateServiceProviderActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_create_service_provider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_create_service_provider_back"
+            android:layout_width="@dimen/sizeFortySix"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_margin="@dimen/sizeEight"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
+            android:padding="@dimen/sizeEight"
+            android:src="@drawable/ic_back"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.project.readyassist_mechapp.utils.MyAppBold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeEight"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.05"
+            android:text="Create Service Provider"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/headline_small"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/img_create_service_provider_back"
+            app:layout_constraintStart_toEndOf="@id/img_create_service_provider_back"
+            app:layout_constraintTop_toTopOf="@+id/img_create_service_provider_back" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        layout="@layout/include_onboard_service_providers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_submit_service_provider"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_create_service_provider" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_submit_service_provider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_fill_primary_box"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:padding="@dimen/sizeSixteen"
+        android:text="@string/label_submit"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MyTextAppearanceBold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

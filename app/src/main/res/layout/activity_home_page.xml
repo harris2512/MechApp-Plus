@@ -175,7 +175,7 @@
                 app:layout_constraintStart_toEndOf="@+id/img_earning_nav_home"
                 app:layout_constraintTop_toBottomOf="@+id/tv_history_nav_home" />
 
-            <!--My Vendors-->
+            <!--My Service providers-->
             <ImageView
                 android:id="@+id/img_vendors_nav_home"
                 android:layout_width="@dimen/sizeTwenty"
@@ -195,7 +195,7 @@
                 android:focusable="true"
                 android:gravity="center_vertical"
                 android:padding="@dimen/sizeTwelve"
-                android:text="My Vendors"
+                android:text="Service Providers"
                 android:textAppearance="@style/MyTextAppearance"
                 android:textColor="@color/black"
                 android:textSize="@dimen/body_regular"

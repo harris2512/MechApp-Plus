@@ -1,12 +1,15 @@
 package com.project.readyassist_mechapp.screen.fragment.my_account;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -16,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.helper.AppConstants;
 import com.project.readyassist_mechapp.helper.SessionManager;
@@ -84,11 +88,44 @@ public class FragmentMyAccount extends Fragment {
 
         /*OnScroll*/
         tv_account_user_sign_out.setOnClickListener(v -> {
-            sendMessageToActivity("1");
-            selectedFragment = FragmentCurrentOrders.newInstance();
-            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.frame_home, selectedFragment);
-            ft.commit();
+
+            final Dialog dialog = new Dialog(getActivity(), R.style.TransparentDialog);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setContentView(R.layout.dialog_alert_actions);
+            dialog.setCancelable(false);
+
+            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+            lp.copyFrom(dialog.getWindow().getAttributes());
+            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+            lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+
+            final TextView tv_dialog_alert_title = dialog.findViewById(R.id.tv_dialog_alert_title);
+            final  TextView tv_dialog_alert_desc = dialog.findViewById(R.id.tv_dialog_alert_desc);
+            final TextView tv_dialog_alert_cancel = dialog.findViewById(R.id.tv_dialog_alert_cancel);
+            final TextView tv_dialog_alert_submit = dialog.findViewById(R.id.tv_dialog_alert_submit);
+
+            tv_dialog_alert_title.setText("Logout");
+            tv_dialog_alert_desc.setText("Are you sure want to logout from application?");
+
+            tv_dialog_alert_submit.setOnClickListener(v1 -> {
+                sendMessageToActivity("1");
+                selectedFragment = FragmentCurrentOrders.newInstance();
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.frame_home, selectedFragment);
+                ft.commit();
+
+                dialog.dismiss();
+
+            });
+            tv_dialog_alert_cancel.setOnClickListener(v1 -> {
+                dialog.dismiss();
+            });
+
+
+            dialog.show();
+            dialog.getWindow().setAttributes(lp);
+
+
         });
 
     }

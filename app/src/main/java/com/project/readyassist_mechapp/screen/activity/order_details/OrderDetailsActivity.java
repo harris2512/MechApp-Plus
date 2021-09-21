@@ -15,6 +15,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.view.Gravity;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -28,6 +30,7 @@ import android.widget.Toast;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.transition.Slide;
@@ -93,6 +96,7 @@ public class OrderDetailsActivity extends AppCompatActivity implements View.OnCl
         detailsBinding.includeOrderVehicleConfirmation.imgOrderDetailsVehicleNoDislike.setOnClickListener(this);
         detailsBinding.includeOrderVehicleConfirmation.imgOrderDetailsVehicleNameLike.setOnClickListener(this);
         detailsBinding.includeOrderVehicleConfirmation.imgOrderDetailsVehicleNameDislike.setOnClickListener(this);
+        detailsBinding.imgMenuOrderDetails.setOnClickListener(this);
         detailsBinding.includeOrderDetailsPayment.tvOrderDetailsPaymentType.setOnClickListener(this);
         detailsBinding.includeOrderDetailsPayment.btnOrderDetailsPaymentSubmit.setOnClickListener(this);
         detailsBinding.includeOrderDetailsOrderCompleted.btnOrderDetailsFailed.setOnClickListener(this);
@@ -208,6 +212,7 @@ public class OrderDetailsActivity extends AppCompatActivity implements View.OnCl
                         .setVisibility(View.GONE);
                 detailsBinding.includeOrderDetailsOrderCompleted.layoutOrderDetailsOrderCompleted
                         .setVisibility(View.VISIBLE);
+                detailsBinding.imgMenuOrderDetails.setVisibility(View.VISIBLE);
 
                 break;
 
@@ -228,6 +233,7 @@ public class OrderDetailsActivity extends AppCompatActivity implements View.OnCl
                         .setVisibility(View.GONE);
                 detailsBinding.includeOrderDetailsOrderCompleted.layoutOrderDetailsOrderCompleted
                         .setVisibility(View.GONE);
+                detailsBinding.imgMenuOrderDetails.setVisibility(View.GONE);
                 detailsBinding.includeOrderDetailsPayment.layoutOrderDetailsPayment
                         .setVisibility(View.VISIBLE);
 
@@ -317,6 +323,17 @@ public class OrderDetailsActivity extends AppCompatActivity implements View.OnCl
             case R.id.btn_order_details_payment_submit:
                 detailsBinding.includeOrderDetailsPayment.layoutOrderDetailsPaymentInvoiceDetails
                         .setVisibility(View.VISIBLE);
+                break;
+
+            case R.id.img_menu_order_details:
+                PopupMenu popup = new PopupMenu(this, v, R.style.MyTextAppearance);
+                popup.setOnMenuItemClickListener(item -> {
+                    showOrderFailedDialog();
+                    return false;
+                });
+                MenuInflater inflater = popup.getMenuInflater();
+                inflater.inflate(R.menu.menu_order_fail, popup.getMenu());
+                popup.show();
                 break;
 
         }

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".screen.activity.service_providers.ServiceProvidersActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_my_vendors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_vendors_back"
+            android:layout_width="@dimen/sizeFortySix"
+            android:layout_height="@dimen/sizeFortySix"
+            android:layout_margin="@dimen/sizeEight"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="@string/contentDescription"
+            android:focusable="true"
+            android:padding="@dimen/sizeEight"
+            android:src="@drawable/ic_back"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.project.readyassist_mechapp.utils.MyAppBold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sizeEight"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.05"
+            android:text="Service Providers"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/headline_small"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/img_vendors_back"
+            app:layout_constraintStart_toEndOf="@id/img_vendors_back"
+            app:layout_constraintTop_toTopOf="@+id/img_vendors_back" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_my_vendors">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabVendorsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@drawable/bg_gray_screen_top_corner"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorColor="@color/colorYellowPrimary"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/MyTextAppearanceBold"
+            app:tabTextColor="@color/colorGreyDark" />
+
+        <FrameLayout
+            android:id="@+id/tabVendorsFrame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorWhiteSmoke"
+            android:paddingStart="@dimen/sizeSixteen"
+            android:paddingEnd="@dimen/sizeSixteen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabVendorsLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_service_provider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/sizeSixteen"
+        android:layout_marginBottom="@dimen/sizeFiftyFive"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_person_add_white"
+        app:backgroundTint="@color/colorYellowPrimary"
+        app:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

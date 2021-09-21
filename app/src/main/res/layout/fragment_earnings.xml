@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/sizeSixteen"
+        android:layout_marginTop="@dimen/sizeEight"
         android:gravity="center_vertical|center_horizontal"
         android:letterSpacing="0.05"
         android:padding="@dimen/sizeSixteen"
@@ -73,14 +73,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/sizeThirtyTwo"
-        android:background="@color/colorWaterGreen"
+        android:background="@color/colorGreenPrimary"
         android:gravity="center_vertical|center_horizontal"
         android:letterSpacing="0.05"
         android:padding="@dimen/sizeEight"
         android:text="@string/label_receivable_formula"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/black"
-        android:textSize="@dimen/body_regular"
         app:layout_constraintEnd_toStartOf="@+id/tv_label_earning_payable"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_earning_details_status" />
@@ -90,14 +89,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/sizeThirtyTwo"
-        android:background="@color/colorWaterYellow"
+        android:background="@color/colorYellowPrimary"
         android:gravity="center_vertical|center_horizontal"
         android:letterSpacing="0.05"
         android:padding="@dimen/sizeEight"
         android:text="@string/label_payable_formula"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/black"
-        android:textSize="@dimen/body_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_label_earning_receivable"
         app:layout_constraintTop_toBottomOf="@+id/tv_earning_details_status" />
@@ -138,7 +136,10 @@
         android:layout_marginTop="@dimen/sizeThirtyTwo"
         android:gravity="start|center_horizontal"
         android:letterSpacing="0.05"
-        android:padding="@dimen/sizeEight"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingTop="@dimen/sizeSixteen"
+        android:paddingEnd="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeSixteen"
         android:text="@string/label_total_earnings"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/black"
@@ -159,15 +160,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_earning_label_total_earnings" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGreyLight"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_total_earnings" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_earning_label_commission"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/sizeEight"
         android:gravity="start|center_horizontal"
         android:letterSpacing="0.05"
-        android:padding="@dimen/sizeEight"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingTop="@dimen/sizeSixteen"
+        android:paddingEnd="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeSixteen"
         android:text="@string/label_commission"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/black"
@@ -188,15 +196,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_earning_label_commission" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGreyLight"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_commission" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_earning_label_cash_collected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/sizeEight"
         android:gravity="start|center_horizontal"
         android:letterSpacing="0.05"
-        android:padding="@dimen/sizeEight"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingTop="@dimen/sizeSixteen"
+        android:paddingEnd="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeSixteen"
         android:text="@string/label_cash_collected"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/black"
@@ -217,15 +232,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_earning_label_cash_collected" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGreyLight"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_cash_collected" />
+
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_earning_label_carry_forward"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/sizeEight"
         android:gravity="start|center_horizontal"
         android:letterSpacing="0.05"
-        android:padding="@dimen/sizeEight"
+        android:paddingStart="@dimen/sizeEight"
+        android:paddingTop="@dimen/sizeSixteen"
+        android:paddingEnd="@dimen/sizeEight"
+        android:paddingBottom="@dimen/sizeSixteen"
         android:text="@string/label_carry_forward"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/black"
@@ -246,6 +269,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_earning_label_carry_forward" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGreyLight"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earning_label_carry_forward" />
+
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
@@ -257,7 +286,8 @@
         android:text="@string/label_transaction_details_desc"
         android:textAppearance="@style/MyTextAppearance"
         android:textColor="@color/colorGreyDark"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_earning_label_carry_forward" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

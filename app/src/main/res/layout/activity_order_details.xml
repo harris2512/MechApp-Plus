@@ -32,7 +32,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.project.readyassist_mechapp.utils.MyAppBold
-            android:id="@+id/tv_label_onboard"
+            android:id="@+id/tv_header_order_details"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/sizeEight"
@@ -45,7 +45,24 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/img_onboard_back"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_menu_order_details"
             app:layout_constraintStart_toEndOf="@id/img_onboard_back"
+            app:layout_constraintTop_toTopOf="@+id/img_onboard_back" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/img_menu_order_details"
+            android:layout_width="@dimen/sizeThirty"
+            android:layout_height="@dimen/sizeThirty"
+            android:layout_marginStart="@dimen/sizeEight"
+            android:layout_marginEnd="@dimen/sizeEight"
+            android:background="@null"
+            android:padding="@dimen/sizeFour"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_option_menu"
+            app:layout_constraintBottom_toBottomOf="@+id/img_onboard_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_header_order_details"
             app:layout_constraintTop_toTopOf="@+id/img_onboard_back" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

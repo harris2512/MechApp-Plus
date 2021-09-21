@@ -41,6 +41,7 @@
         android:textAllCaps="true"
         android:textAppearance="@style/MyTextAppearanceBold"
         android:textColor="@color/white"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/tv_order_details_order_duration_timer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_order_details_order_duration_timer" />

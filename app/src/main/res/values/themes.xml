@@ -14,13 +14,16 @@
         <item name="windowNoTitle">true</item>
         <item name="colorControlNormal">@color/colorAccent</item>
 
+        <item name="android:textViewStyle">@style/PoppinsTextViewStyle</item>
+
+
     </style>
 
 
     <!--Theme - StatusBar Transparent-->
     <style name="status_bar_transparent" parent="Theme.MechApp">
         <item name="android:windowBackground">@color/colorPrimaryDark</item>
-        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:textViewStyle">@style/PoppinsTextViewStyle</item>
 
         <!--Status Bar Color-->
         <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
@@ -32,7 +35,7 @@
     <!--Theme - StatusBar Black-->
     <style name="status_bar_black" parent="Theme.MechApp">
         <item name="android:windowBackground">@color/colorPrimaryDark</item>
-        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:textViewStyle">@style/PoppinsTextViewStyle</item>
 
         <!--Status Bar Color-->
         <item name="colorPrimaryDark">@color/black</item>

@@ -2,37 +2,30 @@ package com.project.readyassist_mechapp.screen.activity.homepage;
 
 import android.annotation.SuppressLint;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.AbsListView;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.readyassist_mechapp.R;
 import com.project.readyassist_mechapp.databinding.ActivityHomePageBinding;
 import com.project.readyassist_mechapp.helper.events.Events;
 import com.project.readyassist_mechapp.helper.events.GlobalBus;
-import com.project.readyassist_mechapp.screen.activity.homepage.adapter.CurrentOrdersListAdapter;
+import com.project.readyassist_mechapp.screen.activity.subscription_sales.SubscriptionSalesActivity;
+import com.project.readyassist_mechapp.screen.activity.service_providers.ServiceProvidersActivity;
 import com.project.readyassist_mechapp.screen.fragment.current_orders.FragmentCurrentOrders;
 import com.project.readyassist_mechapp.screen.fragment.my_account.FragmentMyAccount;
 import com.project.readyassist_mechapp.screen.fragment.my_earnings.FragmentEarnings;
-import com.project.readyassist_mechapp.screen.fragment.onboard.personal_info.FragmentPersonalOnboard;
-import com.project.readyassist_mechapp.utils.RAUtils;
 
 import org.greenrobot.eventbus.Subscribe;
-
-import java.util.ResourceBundle;
 
 public class HomePage extends AppCompatActivity implements View.OnClickListener {
 
@@ -81,6 +74,8 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener 
         homePageBinding.tvOrdersNavHome.setOnClickListener(this);
         homePageBinding.tvAccountNavHome.setOnClickListener(this);
         homePageBinding.tvEarningNavHome.setOnClickListener(this);
+        homePageBinding.tvVendorsNavHome.setOnClickListener(this);
+        homePageBinding.tvSalesNavHome.setOnClickListener(this);
 
     }
 
@@ -126,7 +121,6 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener 
                 ft.commit();
 
                 closeNavigationMenu();
-
                 break;
 
             case R.id.tv_earning_nav_home:
@@ -136,6 +130,16 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener 
                 ft.replace(R.id.frame_home, selectedFragment);
                 ft.commit();
 
+                closeNavigationMenu();
+                break;
+
+            case R.id.tv_vendors_nav_home:
+                startActivity(new Intent(this, ServiceProvidersActivity.class));
+                closeNavigationMenu();
+                break;
+
+            case R.id.tv_sales_nav_home:
+                startActivity(new Intent(this, SubscriptionSalesActivity.class));
                 closeNavigationMenu();
                 break;
 

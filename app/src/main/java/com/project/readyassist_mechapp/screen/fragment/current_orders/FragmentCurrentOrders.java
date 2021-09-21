@@ -67,12 +67,7 @@ public class FragmentCurrentOrders extends Fragment {
 
         showPb();
         final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                dismissPb();
-            }
-        }, 2000);
+        handler.postDelayed(this::dismissPb, 2000);
 
         setCurrentOrderListAdapter();
 
