@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.project.readyassist_mechapp">
 
-
     <!-- Network Provide -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -125,6 +124,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="${mapKey}" />
 
+
     </application>
+
 
 </manifest>
